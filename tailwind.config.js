@@ -1,19 +1,16 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
+  //important: true,
+  content: ["./src/**/*.{html,js,jsx}"],
+  daisyui: {
+    styled: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+    darkTheme: "dark",
+    themes: ["emerald", "dark"],
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+};
