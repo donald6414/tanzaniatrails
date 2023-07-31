@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTelegram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import './hero.css';
 
 const Hero = () => {
   return (
@@ -35,7 +36,7 @@ const Hero = () => {
               analyze and automate blockchain data, unlocking new possibilities
               for innovation and growth.
             </p>
-            <div className="flex flex-wrap justify-center items-center space-x-3">
+            {/* <div className="flex flex-wrap justify-center items-center space-x-3">
               <button className="btn btn-primary rounded-full space-1 mt-1">
                 Buy $gGPT
               </button>
@@ -67,7 +68,7 @@ const Hero = () => {
               >
                 <FaTwitter className="" size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
