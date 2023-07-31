@@ -7,7 +7,7 @@ import "./buttons.css";
 
 const NavBar = () => {
   return (
-    <div className="bg-primary text-slate-900 py-2">
+    <div className="bg-white text-slate-900 py-2">
       <div className="navbar  container mx-auto">
         <>
           <div className="navbar-start">
@@ -20,7 +20,7 @@ const NavBar = () => {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 text-slate-900 rounded-box  w-52"
               >
                 <li>
-                  <Link to={"/tokenomics"}>Tokenomics</Link>
+                  <Link to={"/tokenomics"}>Home</Link>
                 </li>
                 <li tabIndex={0}>
                   <a className="justify-between">
@@ -29,16 +29,16 @@ const NavBar = () => {
                   </a>
                   <ul className="p-2 bg-base-300 text-slate-700">
                     <li>
-                      <Link to={"/greengpt"}>GreenGPT Beta</Link>
+                      <Link to={"/greengpt"}>Tailor Made</Link>
                     </li>
                     <li>
-                      <Link to={"/a2e"}>Ask to Earn</Link>
+                      <Link to={"/a2e"}>Customize Safari</Link>
                     </li>
                   </ul>
                 </li>
                 <li tabIndex={0}>
                   <a className="justify-between">
-                    Marketplace
+                    Tours
                     <FiChevronDown className="font-bold" />
                   </a>
                   <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
@@ -55,7 +55,7 @@ const NavBar = () => {
                 </li>
                 <li tabIndex={0}>
                   <a className="justify-between">
-                    Stake
+                    Destination
                     <FiChevronDown className="font-bold" />
                   </a>
                   <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
@@ -68,7 +68,10 @@ const NavBar = () => {
                   </ul>
                 </li>
                 <li>
-                  <a href="#faqs">FAQs</a>
+                  <Link to={"/blog"}>Blog</Link>
+                </li>
+                <li>
+                  <Link to={"/contact"}>Contacts</Link>
                 </li>
                 <li>
                   <h1>Book</h1>
@@ -80,7 +83,7 @@ const NavBar = () => {
               className="md:flex justify-center items-center hidden"
             >
               <img src={Logo} alt="logo" className="w-10 h-10" />
-              <h1 className="normal-case text-2xl font-bold tracking-wide text-slate-900">
+              <h1 className="normal-case text-2xl font-bold tracking-wide text-[#683e12] ml-2">
                 Tanzaniatrails
               </h1>
             </Link>
@@ -88,7 +91,7 @@ const NavBar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link to={"/tokenomics"}>Tokenomics</Link>
+                <Link to={"/tokenomics"}>Home</Link>
               </li>
               <li tabIndex={0}>
                 <a>
@@ -97,16 +100,16 @@ const NavBar = () => {
                 </a>
                 <ul className="p-2 bg-base-300 text-slate-700">
                   <li>
-                    <Link to={"/greengpt"}>GreenGPT Beta</Link>
+                    <Link to={"/greengpt"}>Tailor Made</Link>
                   </li>
                   <li>
-                    <Link to={"/a2e"}>Ask to Earn</Link>
+                    <Link to={"/a2e"}>Customize Safari</Link>
                   </li>
                 </ul>
               </li>
               <li tabIndex={0}>
                 <a>
-                  Marketplace
+                  Tours
                   <FiChevronDown className="font-bold" />
                 </a>
                 <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
@@ -123,7 +126,7 @@ const NavBar = () => {
               </li>
               <li tabIndex={0}>
                 <a>
-                  Stake
+                  Destination
                   <FiChevronDown className="font-bold" />
                 </a>
                 <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
@@ -136,13 +139,21 @@ const NavBar = () => {
                 </ul>
               </li>
               <li>
-                <a href="#faqs">FAQs</a>
+                <Link to={"/blog"}>Blog</Link>
+              </li>
+              <li>
+                <Link to={"/contact"}>Contacts</Link>
               </li>
             </ul>
           </div>
           <div className="navbar-end ">
             <span className="hidden md:flex rounded-full">
-              <h1>Book</h1>
+              <Link
+                to={"/tailormade"}
+                className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full space-1 mt-1 ring-transparent"
+              >
+                Tailor Made
+              </Link>
             </span>
 
             <Link
@@ -150,7 +161,7 @@ const NavBar = () => {
               className="flex justify-center items-center md:hidden "
             >
               <img src={Logo} alt="logo" className="w-10 h-10" />
-              <h1 className="normal-case text-2xl font-bold tracking-wide pr-3 text-slate-900">
+              <h1 className="normal-case text-2xl font-bold tracking-wide pr-3 text-[#683e12] ml-2">
                 Tanzaniatrails
               </h1>
             </Link>

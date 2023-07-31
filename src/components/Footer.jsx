@@ -12,7 +12,9 @@ const Footer = () => {
           <div>
             <img src={Logo} alt="logo" className="w-24 h-24" />
             <p>
-              <span className="text-2xl mb-3 font-bold">GreenGPT Co. Ltd.</span>
+              <span className="text-2xl mb-3 font-bold">
+                TanzaniaTrails Co. Ltd.
+              </span>
               <br />
               Meme based AI Project inspired by ChainGPT.
             </p>
