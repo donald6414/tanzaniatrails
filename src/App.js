@@ -1,4 +1,3 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
 import { Footer, NavBar } from "./components";
 import { Route, Routes } from "react-router-dom";
 import {

@@ -6,7 +6,7 @@ import Operation from "./Operation";
 import FAQs from "./FAQs";
 import Metrics from "./Metrics";
 import GreenGPTAI from "./GreenGPTAI";
-import { ButtonHover, Button, ConnectBtn } from "./Buttons";
+import { ButtonHover, Button } from "./Buttons";
 
 export {
   NavBar,
@@ -19,5 +19,4 @@ export {
   Hero,
   ButtonHover,
   Button,
-  ConnectBtn,
 };

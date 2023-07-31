@@ -2,10 +2,8 @@ import React from "react";
 import { FaTelegram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GreenGPTAI } from "../components";
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
 const GreenGPT = () => {
-  const address = useAddress();
   return (
     <div className="bg-slate-100 py-10 md:py-24">
       <div className="container mx-auto px-5 md:px-24">
@@ -63,13 +61,7 @@ const GreenGPT = () => {
             </a>
           </div>
         </div>
-        {address ? (
-          <GreenGPTAI />
-        ) : (
-          <div className="flex flex-col">
-            <ConnectWallet />
-          </div>
-        )}
+        <h1>Hello</h1>
       </div>
     </div>
   );
