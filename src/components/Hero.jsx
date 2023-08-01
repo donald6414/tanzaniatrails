@@ -63,7 +63,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="-mt-10">
           <BookingHorizontal />
         </div>
       </div>
