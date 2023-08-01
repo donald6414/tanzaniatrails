@@ -28,12 +28,12 @@ const Hero = () => {
                 growth.
               </p>
               {/* <div className="flex flex-wrap justify-center items-center space-x-3">
-              <button className="btn btn-primary rounded-full space-1 mt-1">
+              <button className="btn btn-[#683e12] rounded-full space-1 mt-1">
                 Buy $gGPT
               </button>
               <Link
                 to={"/greengpt"}
-                className="btn btn-primary rounded-full space-1 mt-1"
+                className="btn btn-[#683e12] rounded-full space-1 mt-1"
               >
                 Try GreenGPT
               </Link>

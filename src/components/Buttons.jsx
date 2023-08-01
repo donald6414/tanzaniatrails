@@ -7,7 +7,7 @@ export const Button = ({ title, color, onClick }) => {
   //bg-gradient-to-r from-[#1dc071] to-[#50a7c2]
   return (
     <button
-      className={`${color} p-2 px-3 rounded-full font-bold text-slate-200 border-2 border-[#1dc071] uppercase`}
+      className={`${color} p-2 px-3 rounded-full font-bold text-slate-200 border-2 border-[#683e12] uppercase`}
       onClick={onClick}
     >
       {title}

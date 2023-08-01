@@ -8,6 +8,8 @@ import Metrics from "./Metrics";
 import GreenGPTAI from "./GreenGPTAI";
 import { ButtonHover, Button } from "./Buttons";
 import { BookingHorizontal, BookingVertical, BookingForm } from "./Booking";
+import { Heading, Title, Title2, Paragraph } from "./Title";
+import { Selection } from "./Selection";
 
 export {
   NavBar,
@@ -23,4 +25,9 @@ export {
   BookingHorizontal,
   BookingVertical,
   BookingForm,
+  Heading,
+  Title,
+  Title2,
+  Paragraph,
+  Selection,
 };
