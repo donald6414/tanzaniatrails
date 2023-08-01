@@ -9,7 +9,7 @@ import GreenGPTAI from "./GreenGPTAI";
 import { ButtonHover, Button } from "./Buttons";
 import { BookingHorizontal, BookingVertical, BookingForm } from "./Booking";
 import { Heading, Title, Title2, Paragraph } from "./Title";
-import { Selection } from "./Selection";
+import { SelectionDate, SelectionBook, Selection } from "./Selection";
 
 export {
   NavBar,
@@ -30,4 +30,6 @@ export {
   Title2,
   Paragraph,
   Selection,
+  SelectionDate,
+  SelectionBook,
 };
