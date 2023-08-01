@@ -7,6 +7,7 @@ import FAQs from "./FAQs";
 import Metrics from "./Metrics";
 import GreenGPTAI from "./GreenGPTAI";
 import { ButtonHover, Button } from "./Buttons";
+import { BookingHorizontal, BookingVertical, BookingForm } from "./Booking";
 
 export {
   NavBar,
@@ -19,4 +20,7 @@ export {
   Hero,
   ButtonHover,
   Button,
+  BookingHorizontal,
+  BookingVertical,
+  BookingForm,
 };

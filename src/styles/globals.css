@@ -20,6 +20,7 @@ a {
 }
 
 body {
+  @apply bg-slate-100;
   //color: #e7e8e8;
-  background: #e6e6e6;
+  //background: #e6e6e6;
 }
