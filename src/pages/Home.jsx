@@ -1,14 +1,20 @@
 import React from "react";
-import { Ecosystem, FAQs, Hero, Metrics, Operation } from "../components";
-import Featured from '../components/Featured';
+import {
+  Destinations,
+  Ecosystem,
+  FAQs,
+  Featured,
+  Hero,
+  Operation,
+} from "../components";
 
 const Home = () => {
   return (
     <div className="">
       <Hero />
-      <Featured/>
-      <Metrics />
+      <Featured />
       <Ecosystem />
+      <Destinations />
       <Operation />
       <FAQs />
     </div>
