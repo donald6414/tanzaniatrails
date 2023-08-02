@@ -23,7 +23,7 @@ export const BookingHorizontal = () => {
         <div className="flex items-center justify-center">
           <Link
             to={"/greengpt"}
-            className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full space-1"
+            className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full  border-none"
           >
             Search
           </Link>

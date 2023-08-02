@@ -1,5 +1,5 @@
 import React from "react";
-import { GrLocationPin } from "react-icons/gr";
+import { GrCalendar, GrLocationPin } from "react-icons/gr";
 
 export const Selection = () => {
   return (
@@ -25,7 +25,7 @@ export const SelectionDate = () => {
   return (
     <div className="flex flex-row justify-center items-center">
       <div>
-        <GrLocationPin size={28} className="mr-1" />
+        <GrCalendar size={28} className="mr-1" />
       </div>
       <div className="form-control">
         <select className="select select-bordered ring-transparent rounded-full w-full max-w-xs">

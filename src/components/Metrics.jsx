@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Title } from "./Title";
 
 const Metrics = () => {
   return (
@@ -8,9 +9,7 @@ const Metrics = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 content-center gap-20">
           <div className="grid col-span-2 text-slate-900">
             <div className="">
-              <h5 className="font-bold md:text-4xl text-2xl text-center md:text-start drop-shadow-lg">
-                Auto-reward Contracting.
-              </h5>
+              <Title title={"Featured Tours"} locate={"start"} />
               <p className="md:text-lg md:mt-10 mt-5 text-justify md:text-start">
                 GreenGPT contract takes 2% of tokens which are automatically
                 distributed to holders in $cGPT Token, 2% goes to a CEX listing

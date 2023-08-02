@@ -150,7 +150,7 @@ const NavBar = () => {
             <span className="hidden md:flex rounded-full">
               <Link
                 to={"/tailormade"}
-                className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full space-1 mt-1 ring-transparent"
+                className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full space-1 mt-1 border-none"
               >
                 Tailor Made
               </Link>
