@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div>
       <div className="container mx-auto p-5 md:py-16 ">
-        <div className="hero md:py-24 py-10 px-5 rounded-lg bg-grey-600/10 backdrop-brightness-50">
+        <div className="hero md:py-24 py-10 px-5 rounded-lg ">
           <div className="hero-content text-center md:text-start flex flex-col md:flex-row">
             <div className="md:mx-36">
               <h1 className="md:text-7xl text-3xl text-white font-bold tracking-wide">

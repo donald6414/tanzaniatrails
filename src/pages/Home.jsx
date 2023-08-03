@@ -7,6 +7,7 @@ import {
   Featured,
   Hero,
   Operation,
+  TrekkingFeatured,
 } from "../components";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <Featured />
       <BeachFeatured />
+      <TrekkingFeatured />
       <Ecosystem />
       <Destinations />
       <Operation />

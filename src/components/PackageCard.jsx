@@ -7,7 +7,7 @@ import { toursData } from "../constants";
 export const PackageCard = () => {
   return (
     <div>
-      <div className="flex flex-col shadow rounded bg-white">
+      <div className="flex flex-col shadow-md hover:drop-shadow-lg rounded bg-white">
         <div>
           <img src={twigaImage} alt="" className="w-full h-full rounded" />
         </div>
@@ -39,7 +39,7 @@ export const TourCard = ({ tour }) => {
     toursData.reviews.length;
 
   return (
-    <div className="border p-4 rounded-lg shadow-md">
+    <div className="border p-4 rounded-lg shadow-md bg-white">
       <img
         src={toursData.image}
         alt={toursData.title}

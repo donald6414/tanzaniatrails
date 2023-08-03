@@ -9,9 +9,10 @@ import { ButtonHover, Button } from "./Buttons";
 import { BookingHorizontal, BookingVertical, BookingForm } from "./Booking";
 import { Heading, Title, Title2, Paragraph } from "./Title";
 import { SelectionDate, SelectionBook, Selection } from "./Selection";
-import { BeachFeatured, Featured } from "./Featured";
+import { BeachFeatured, TrekkingFeatured, Featured } from "./Featured";
 import { Destinations } from "./Destinations";
 import { TourCard, PackageCard } from "./PackageCard";
+import { NewsLetter } from "./NewsLetter";
 
 export {
   NavBar,
@@ -35,7 +36,9 @@ export {
   SelectionBook,
   Featured,
   BeachFeatured,
+  TrekkingFeatured,
   Destinations,
   PackageCard,
   TourCard,
+  NewsLetter,
 };
