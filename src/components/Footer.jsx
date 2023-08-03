@@ -25,6 +25,57 @@ const Footer = () => {
                 Discover Your Next Adventure.
               </p>
             </div>
+
+            {/**Company */}
+            <div className="">
+              <span className="footer-title">Company</span>
+              <a href="#hero" className="text-slate-100 hover:text-primary">
+                About us
+              </a>
+              <a href="#faqs" className="text-slate-100 hover:text-primary">
+                Contact
+              </a>
+              <Link
+                to={"/jobs"}
+                href="#"
+                className="text-slate-100 hover:text-primary"
+              >
+                Jobs
+              </Link>
+              <Link
+                to={"/press-kit"}
+                href="#"
+                className="text-slate-100 hover:text-primary"
+              >
+                Press kit
+              </Link>
+            </div>
+            {/**Tours */}
+            <div className="flex flex-col">
+              <span className="footer-title">Tours</span>
+              <a href="#hero" className="text-slate-100 hover:text-primary">
+                About us
+              </a>
+              <a href="#faqs" className="text-slate-100 hover:text-primary">
+                Contact
+              </a>
+              <Link
+                to={"/jobs"}
+                href="#"
+                className="text-slate-100 hover:text-primary"
+              >
+                Jobs
+              </Link>
+              <Link
+                to={"/press-kit"}
+                href="#"
+                className="text-slate-100 hover:text-primary"
+              >
+                Press kit
+              </Link>
+            </div>
+
+            {/**Services */}
             <div className="">
               <span className="footer-title">Services</span>
               <Link
@@ -56,29 +107,7 @@ const Footer = () => {
                 Marketplace
               </Link>
             </div>
-            <div>
-              <span className="footer-title">Company</span>
-              <a href="#hero" className="text-slate-100 hover:text-primary">
-                About us
-              </a>
-              <a href="#faqs" className="text-slate-100 hover:text-primary">
-                Contact
-              </a>
-              <Link
-                to={"/jobs"}
-                href="#"
-                className="text-slate-100 hover:text-primary"
-              >
-                Jobs
-              </Link>
-              <Link
-                to={"/press-kit"}
-                href="#"
-                className="text-slate-100 hover:text-primary"
-              >
-                Press kit
-              </Link>
-            </div>
+            {/**Legal */}
             <div>
               <span className="footer-title">Legal</span>
               <Link
@@ -101,7 +130,7 @@ const Footer = () => {
             </div>
           </>
         </footer>
-        <footer className="footer items-center p-4 bg-[#51300d] text-neutral-content container mx-auto rounded-full ">
+        <footer className="footer items-center px-4 p-4 bg-[#51300d] text-neutral-content container mx-auto rounded-t-lg ">
           <>
             <div className="items-center grid-flow-col ">
               <p>Copyright © 2023 -Tanzania Trails. All right reserved.</p>

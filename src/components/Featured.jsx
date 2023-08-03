@@ -85,8 +85,8 @@ export const BeachFeatured = () => {
           <Paragraph
             content={"Most recommended tours on this season."}
             locate={"start"}
-            color={"slate-500"}
-            className={"text-slate-200"}
+            color={"slate-200"}
+            className={""}
           />
           <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5">
             <div className="col-span-3">

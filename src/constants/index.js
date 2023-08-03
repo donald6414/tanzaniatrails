@@ -137,8 +137,28 @@ export const toursData = [
 ];
 
 export const footerData = {
-  services: [{ Account: "Account" }],
-  company: [{ title: "Account", to: "/home" }],
-  tours: [{ Account: "Account" }],
-  legal: [{ Account: "Account" }],
+  company: [
+    { id: 1, title: "About us", to: "/about" },
+    { id: 2, title: "Contact us", to: "/contact" },
+    { id: 3, title: "Jobs", to: "/home" },
+    { id: 4, title: "Press Kit", to: "/press-kit" },
+  ],
+  tours: [
+    { id: 1, title: "Mid Range", to: "/tour-search" },
+    { id: 2, title: "Account", to: "/home" },
+    { id: 3, title: "Account", to: "/home" },
+    { id: 4, title: "Account", to: "/home" },
+  ],
+  services: [
+    { id: 1, title: "Account", to: "/home" },
+    { id: 2, title: "Account", to: "/home" },
+    { id: 3, title: "Account", to: "/home" },
+    { id: 4, title: "Account", to: "/home" },
+  ],
+  legal: [
+    { id: 1, title: "Account", to: "/home" },
+    { id: 2, title: "Account", to: "/home" },
+    { id: 3, title: "Account", to: "/home" },
+    { id: 4, title: "Account", to: "/home" },
+  ],
 };
