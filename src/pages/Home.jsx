@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  BeachFeatured,
   Destinations,
   Ecosystem,
   FAQs,
@@ -13,6 +14,7 @@ const Home = () => {
     <div className="">
       <Hero />
       <Featured />
+      <BeachFeatured />
       <Ecosystem />
       <Destinations />
       <Operation />

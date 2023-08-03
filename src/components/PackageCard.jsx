@@ -7,7 +7,7 @@ import { toursData } from "../constants";
 export const PackageCard = () => {
   return (
     <div>
-      <div className="flex flex-col shadow rounded">
+      <div className="flex flex-col shadow rounded bg-white">
         <div>
           <img src={twigaImage} alt="" className="w-full h-full rounded" />
         </div>
