@@ -1,35 +1,27 @@
 import React from "react";
-import { Title2 } from "./Title";
-import { Selection, SelectionBook, SelectionDate } from "./Selection";
-import { Link } from "react-router-dom";
+import { Title } from "./Title";
 
 export const NewsLetter = () => {
   return (
     <div className="flex items-center justify-center ">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-10 bg-white md:mx-40 p-5 md:rounded-full rounded-lg drop-shadow-lg ">
+      <form className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 bg-white md:mx-40 p-5 md:rounded-full rounded-lg drop-shadow-lg md:px-10">
         <div className="flex items-center justify-center">
-          <Title2 title={"Book Now"} />
+          <Title title={"Dont Miss Anything"} className={"drop-shadow-lg"} />
         </div>
-        <div>
-          <div className="">
-            <Selection />
-          </div>
-        </div>
-        <div>
-          <SelectionBook />
-        </div>
-        <div>
-          <SelectionDate />
-        </div>
-        <div className="flex items-center justify-center">
-          <Link
-            to={"/greengpt"}
-            className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full  border-none"
+        <div className="bg-[#51300d] flex items-center justify-between rounded-full space-x-5 p-1 ">
+          <input
+            type="email"
+            placeholder="Email"
+            className="input input-bordered w-full rounded-full max-w-xs drop-shadow"
+          />
+          <button
+            type="submit"
+            className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full px-5  border-none hover:drop-shadow"
           >
-            Search
-          </Link>
+            Join
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

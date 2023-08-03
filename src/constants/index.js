@@ -135,3 +135,10 @@ export const toursData = [
   },
   // Add more tours here...
 ];
+
+export const footerData = {
+  services: [{ Account: "Account" }],
+  company: [{ title: "Account", to: "/home" }],
+  tours: [{ Account: "Account" }],
+  legal: [{ Account: "Account" }],
+};

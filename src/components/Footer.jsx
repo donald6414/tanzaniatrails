@@ -14,6 +14,7 @@ const Footer = () => {
       <div className="bg-[#2a1907] mt-10 pt-8">
         <footer className=" footer p-10  text-slate-100 container mx-auto">
           <>
+            {/**Logo */}
             <div>
               <img src={Logo} alt="logo" className="w-24 h-24" />
               <p>
