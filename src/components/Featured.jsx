@@ -6,7 +6,7 @@ import { FaBackward, FaForward } from "react-icons/fa";
 
 export const Featured = () => {
   return (
-    <div className="bg-slate-100 md:py-24 py-10">
+    <div className="bg-slate-100 md:pb-24 py-10">
       <div className="container mx-auto px-5">
         <div className="flex items-center justify-between">
           <Title title={"Featured Tours"} locate={"start"} />

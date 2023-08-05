@@ -13,6 +13,7 @@ import { BeachFeatured, TrekkingFeatured, Featured } from "./Featured";
 import { Destinations } from "./Destinations";
 import { TourCard, PackageCard } from "./PackageCard";
 import { NewsLetter } from "./NewsLetter";
+import { TourCategories } from "./Categories";
 
 export {
   NavBar,
@@ -41,4 +42,5 @@ export {
   PackageCard,
   TourCard,
   NewsLetter,
+  TourCategories,
 };

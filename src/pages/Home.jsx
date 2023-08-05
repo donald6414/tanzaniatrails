@@ -7,6 +7,7 @@ import {
   Featured,
   Hero,
   Operation,
+  TourCategories,
   TrekkingFeatured,
 } from "../components";
 
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div className="">
       <Hero />
+      <TourCategories />
       <Featured />
       <BeachFeatured />
       <TrekkingFeatured />
