@@ -106,7 +106,7 @@ export const TourCard = () => {
               </button>
             </div>
           </div>
-          <div className="absolute w-full bg-gradient-to-t from-gray-700  via-slate-500 to-transparent text-white px-5 pt-10 pb-5 rounded-lg bottom-0">
+          <div className="absolute w-full bg-gradient-to-t from-gray-700  via-slate-500 to-transparent  text-white px-5 pt-10 pb-5 rounded-lg bottom-0">
             {/** safari reviews  */}
             <div className="-mt-8 flex items-center justify-between ">
               <h1 className="font-bold text-xs flex items-center ">
@@ -141,7 +141,7 @@ export const TourCard = () => {
             {/** price & details */}
             <div className="border-slate-100 border-t-2 text-white">
               <div className="flex items-center justify-between mt-2">
-                <h5 className="font-bold text-xl">$ 1800 / pp</h5>
+                <h5 className="font-bold text-xl">$ 1800</h5>
                 <Link
                   to={"/singletour"}
                   className=" text-lg flex items-center text-white"
