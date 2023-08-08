@@ -1,9 +1,15 @@
 import React from "react";
-import { FaGithubAlt, FaTelegram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithubAlt,
+  FaTelegram,
+  FaTripadvisor,
+  FaTwitter,
+} from "react-icons/fa";
 
 const FAQs = () => {
   return (
-    <div id="faqs" className="bg-white md:py-24 py-10">
+    <div id="faqs" className=" md:py-24 py-10">
       <div className="container mx-auto px-5 md:px-32">
         <div>
           <h1 className="md:text-7xl tracking-wide font-bold text-center text-slate-900 ">
@@ -13,7 +19,7 @@ const FAQs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 mt-10 md:gap-20 gap-5 content-center">
           <div className="col-span-2">
             <div tabIndex={0} className="collapse group mt-3">
-              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-primary group-focus:text-secondary-content">
+              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
                 What is GreenGPT
               </div>
               <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
@@ -26,7 +32,7 @@ const FAQs = () => {
               </div>
             </div>
             <div tabIndex={0} className="collapse group mt-3">
-              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-primary group-focus:text-secondary-content">
+              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
                 What is ChainGPT Staking?
               </div>
               <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
@@ -40,7 +46,7 @@ const FAQs = () => {
               </div>
             </div>
             <div tabIndex={0} className="collapse group mt-3">
-              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-primary group-focus:text-secondary-content">
+              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
                 How can I get involved with GreenGPT?
               </div>
               <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
@@ -54,7 +60,7 @@ const FAQs = () => {
             </div>
 
             <div tabIndex={0} className="collapse group mt-3">
-              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-primary group-focus:text-secondary-content">
+              <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
                 How can I earn cryptocurrency with GreenGPT
               </div>
               <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
@@ -79,12 +85,11 @@ const FAQs = () => {
                   className=""
                 >
                   <div className="stat-value">
-                    <FaGithubAlt className="" />
+                    <FaFacebook className="text-[#683e12]" />
                   </div>
-                  <div className="stat-desc mt-2">@GreenGTP</div>
+                  {/* <div className="stat-desc mt-2">@GreenGTP</div> */}
                 </a>
               </div>
-
               <div className="stat">
                 <a
                   href="https://t.me/greengpt_ai"
@@ -93,12 +98,24 @@ const FAQs = () => {
                   className=""
                 >
                   <div className="stat-value">
-                    <FaTelegram className="" />
+                    <FaTelegram className="text-[#683e12]" />
                   </div>
-                  <div className="stat-desc mt-2">@GreenGTP</div>{" "}
+                  {/* <div className="stat-desc mt-2">@GreenGTP</div>{" "} */}
                 </a>
               </div>
-
+              <div className="stat">
+                <a
+                  href="https://t.me/greengpt_ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <div className="stat-value">
+                    <FaTripadvisor className="text-[#683e12]" />
+                  </div>
+                  {/* <div className="stat-desc mt-2">@GreenGTP</div>{" "} */}
+                </a>
+              </div>
               <div className="stat">
                 <a
                   href="https://twitter.com/gGPT_ai"
@@ -107,9 +124,9 @@ const FAQs = () => {
                   className=""
                 >
                   <div className="stat-value">
-                    <FaTwitter className="" />
+                    <FaTwitter className="text-[#683e12]" />
                   </div>
-                  <div className="stat-desc mt-2">@GreenGTP</div>
+                  {/* <div className="stat-desc mt-2">@GreenGTP</div> */}
                 </a>
               </div>
             </div>

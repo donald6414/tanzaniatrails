@@ -3,6 +3,7 @@ import twigaImage from "../assets/twiga.jpeg";
 import { Title2 } from "./Title";
 import { Link } from "react-router-dom";
 import { toursData } from "../constants";
+import { FaChevronLeft, FaChevronRight, FaHeart, FaStar } from "react-icons/fa";
 
 export const PackageCard = () => {
   return (
@@ -33,7 +34,7 @@ export const PackageCard = () => {
   );
 };
 
-export const TourCard = ({ tour }) => {
+export const TourCard1 = ({ tour }) => {
   const averageRating =
     toursData.reviews.reduce((total, review) => total + review.rating, 0) /
     toursData.reviews.length;
@@ -73,6 +74,162 @@ export const TourCard = ({ tour }) => {
         <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
           Book Now
         </button>
+      </div>
+    </div>
+  );
+};
+
+export const TourCard = () => {
+  return (
+    <div className="shadow-md hover:drop-shadow-lg">
+      <div className="flex flex-col">
+        <div className="relative">
+          <img
+            src="https://www.serengetiparktanzania.com/wp-content/uploads/2021/01/Serengeti-National-Park-Tanzania.jpg"
+            alt="tour card"
+            className="h-96 w-full object-cover content-center rounded-lg"
+          />
+          <div className="absolute inset-0 bg-gray-950 bg-opacity-30 rounded-lg"></div>
+          <div className="">
+            <div className="absolute flex justify-between items-center top-5 left-5">
+              <Link
+                to={"/greengpt"}
+                className="  btn bg-[#683e12] bg-transparent-50  hover:bg-[#51300d] rounded-full  border-none  "
+              >
+                Featured
+              </Link>
+            </div>
+
+            <div className="absolute flex justify-between items-center top-5 right-5">
+              <button className=" bg-[#683e12] hover:bg-[#51300d] rounded-full  border-none text-white ">
+                <FaHeart size={24} className="m-3" />
+              </button>
+            </div>
+          </div>
+          <div className="absolute w-full bg-gradient-to-t from-gray-700  via-slate-500 to-transparent text-white px-5 pt-10 pb-5 rounded-lg bottom-0">
+            {/** safari reviews  */}
+            <div className="-mt-8 flex items-center justify-between ">
+              <h1 className="font-bold text-xs flex items-center ">
+                <Link className="text-white">Arusha </Link>
+                <FaChevronRight className="text-xs mx-2 text-white" />
+                <Link className="text-white">Serengeti </Link>
+              </h1>
+              <span className="flex items-center bg-[#683e12] p-1 px-2 rounded-full ">
+                <FaStar className="text-xs mr-2" />
+                <h1 className="font-bold text-xs">4.7 ( 345 )</h1>
+              </span>
+            </div>
+            {/** safari title */}
+            <div className="py-5 text-white">
+              <Link className="font-bold text-xl text-white ">
+                Best Kilimanjaro Luxury
+              </Link>
+              <h1 className="font-bold text-sm">5 Days / 4 Nights</h1>
+            </div>
+            {/** safari types */}
+            <div className="pb-3 flex flex-wrap gap-2">
+              <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
+                <h1 className="font-bold text-sm px-2">Mid Range</h1>
+              </Link>
+              <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
+                <h1 className="font-bold text-sm px-2">Luxury</h1>
+              </Link>
+              <Link className="border-2 border-gray-500 bg-gray-400  text-white p-1 rounded-full">
+                <h1 className="font-bold text-sm px-2">Mid Range</h1>
+              </Link>
+            </div>
+            {/** price & details */}
+            <div className="border-slate-100 border-t-2 text-white">
+              <div className="flex items-center justify-between mt-2">
+                <h5 className="font-bold text-xl">$ 1800 / pp</h5>
+                <Link
+                  to={"/singletour"}
+                  className=" text-lg flex items-center text-white"
+                >
+                  Details
+                  <FaChevronRight className="text-xs ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const TourCardOrg = () => {
+  return (
+    <div className="hover:drop-shadow-lg">
+      <div className="flex flex-col">
+        <div className="relative">
+          <img
+            src="https://www.serengetiparktanzania.com/wp-content/uploads/2021/01/Serengeti-National-Park-Tanzania.jpg"
+            alt="tour card"
+            className="h-96 w-full object-cover content-center rounded-lg"
+          />
+          <div className="">
+            <div className="absolute flex justify-between items-center top-5 left-5">
+              <Link
+                to={"/greengpt"}
+                className="  btn bg-[#683e12] bg-transparent-50  hover:bg-[#51300d] rounded-full  border-none  "
+              >
+                Featured
+              </Link>
+            </div>
+
+            <div className="absolute flex justify-between items-center top-5 right-5">
+              <button className=" bg-[#683e12] hover:bg-[#51300d] rounded-full  border-none text-white ">
+                <FaHeart size={24} className="m-3" />
+              </button>
+            </div>
+          </div>
+          <div className="absolute w-full bg-white px-5 pt-10 pb-5 rounded-lg bottom-0">
+            {/** safari reviews  */}
+            <div className="-mt-8 flex items-center justify-between">
+              <h1 className="font-bold text-xs flex items-center">
+                <Link>Arusha </Link> <FaChevronRight className="text-xs mx-2" />
+                <Link>Serengeti </Link>
+              </h1>
+              <span className="flex items-center ">
+                <FaStar className="text-xs mr-2" />
+                <h1 className="font-bold text-xs">4.7 ( 345 )</h1>
+              </span>
+            </div>
+            {/** safari title */}
+            <div className="py-5">
+              <Link className="font-bold text-xl text-slate-500">
+                Best Kilimanjaro Luxury
+              </Link>
+              <h1 className="font-bold text-sm">5 Days / 4 Nights</h1>
+            </div>
+            {/** safari types */}
+            <div className="pb-3 flex flex-wrap gap-2">
+              <Link className="border-2 border-gray-500 p-1 rounded-full">
+                <h1 className="font-bold text-sm px-2">Mid Range</h1>
+              </Link>
+              <Link className="border-2 border-gray-500 p-1 rounded-full">
+                <h1 className="font-bold text-sm px-2">Luxury</h1>
+              </Link>
+              <Link className="border-2 border-gray-500 p-1 rounded-full">
+                <h1 className="font-bold text-sm px-2">Mid Range</h1>
+              </Link>
+            </div>
+            {/** price & details */}
+            <div className="border-slate-800 border-t-2">
+              <div className="flex items-center justify-between mt-2">
+                <h5 className="font-bold text-xl">$ 1800</h5>
+                <Link
+                  to={"/singletour"}
+                  className="text-[#683e12] text-lg flex items-center"
+                >
+                  Details
+                  <FaChevronRight className="text-xs ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Paragraph, Title, Title2 } from "./Title";
-import { PackageCard } from "./PackageCard";
+import { PackageCard, TourCard } from "./PackageCard";
 import { Link } from "react-router-dom";
 import { FaBackward, FaForward } from "react-icons/fa";
 
@@ -28,10 +28,10 @@ export const Featured = () => {
           color={"slate-500"}
         />
         <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5 ">
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
         </div>
 
         {/** View All */}
@@ -92,9 +92,9 @@ export const BeachFeatured = () => {
             <div className="col-span-3">
               <div className="flex items-center">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                  <PackageCard />
-                  <PackageCard />
-                  <PackageCard />
+                  <TourCard />
+                  <TourCard />
+                  <TourCard />
                 </div>
               </div>
             </div>
@@ -167,10 +167,10 @@ export const TrekkingFeatured = () => {
           color={"slate-500"}
         />
         <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5 ">
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
         </div>
 
         {/** View All */}
