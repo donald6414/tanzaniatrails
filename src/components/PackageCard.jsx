@@ -3,7 +3,39 @@ import twigaImage from "../assets/twiga.jpeg";
 import { Title2 } from "./Title";
 import { Link } from "react-router-dom";
 import { toursData } from "../constants";
-import { FaChevronLeft, FaChevronRight, FaHeart, FaStar } from "react-icons/fa";
+import { FaChevronRight, FaHeart, FaStar } from "react-icons/fa";
+import { GiVintageRobot } from "react-icons/gi";
+
+export const EcosystemCard = ({ title, content, to, bargeText }) => {
+  return (
+    <div className="rounded p-10 text-center md:text-start bg-white drop-shadow-md">
+      <div className="indicator mt-10">
+        <span className="indicator-item badge badge-primary">
+          {bargeText}100%
+        </span>
+        <span className="rounded-full  bg-[#683e12]">
+          <GiVintageRobot size={32} className="m-5 text-white" />
+        </span>
+      </div>
+      <h5 className="font-bold md:text-3xl mt-3">{title}Auto Generator</h5>
+      <p className="text-slate-500 md:mt-5 md:text-lg">
+        {content}
+        $gGPT is the utility token behind the GreenGPT ecosystem. It is
+        ultimately how community access the AI model, GreenGPT, and GreenGPT
+        Marketplace and more on build.
+      </p>
+
+      <div className="mt-5 flex items-center">
+        <Link
+          to={to}
+          className="btn bg-[#683e12] hover:bg-[#51300d] rounded-r-full  border-none hover:drop-shadow-lg"
+        >
+          Go.
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 export const PackageCard = () => {
   return (
@@ -134,9 +166,9 @@ export const TourCard = () => {
               <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
                 <h1 className="font-bold text-sm px-2">Luxury</h1>
               </Link>
-              <Link className="border-2 border-gray-500 bg-gray-400  text-white p-1 rounded-full">
+              {/* <Link className="border-2 border-gray-500 bg-gray-400  text-white p-1 rounded-full">
                 <h1 className="font-bold text-sm px-2">Mid Range</h1>
-              </Link>
+              </Link> */}
             </div>
             {/** price & details */}
             <div className="border-slate-100 border-t-2 text-white">

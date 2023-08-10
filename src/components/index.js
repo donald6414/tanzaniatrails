@@ -14,6 +14,7 @@ import { Destinations } from "./Destinations";
 import { TourCard, PackageCard } from "./PackageCard";
 import { NewsLetter } from "./NewsLetter";
 import { TourCategories } from "./Categories";
+import { PackageSlider } from "./PackageSlider";
 
 export {
   NavBar,
@@ -43,4 +44,5 @@ export {
   TourCard,
   NewsLetter,
   TourCategories,
+  PackageSlider,
 };

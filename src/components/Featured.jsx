@@ -3,7 +3,8 @@ import { Paragraph, Title, Title2 } from "./Title";
 import { PackageCard, TourCard } from "./PackageCard";
 import { Link } from "react-router-dom";
 import { FaBackward, FaForward } from "react-icons/fa";
-
+import { PackageSlider } from "./PackageSlider";
+import { useSwiper } from "swiper/react";
 export const Featured = () => {
   return (
     <div className="bg-slate-100 md:pb-24 py-10">
@@ -27,12 +28,15 @@ export const Featured = () => {
           locate={"start"}
           color={"slate-500"}
         />
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5 ">
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
+        <div className="mt-5">
+          <PackageSlider />
         </div>
+        {/* <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5 ">
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
+        </div> */}
 
         {/** View All */}
         <div className="mt-5 flex items-center justify-between">

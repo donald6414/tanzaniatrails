@@ -1,0 +1,50 @@
+import { useRef, useEffect } from "react";
+import { register } from "swiper/element/bundle";
+import { TourCard } from "./PackageCard";
+
+register();
+
+export const PackageSlider = () => {
+  const swiperElRef = useRef(null);
+
+  useEffect(() => {
+    // listen for Swiper events using addEventListener
+    swiperElRef.current.addEventListener("progress", (e) => {
+      const [swiper, progress] = e.detail;
+      console.log(progress);
+    });
+
+    swiperElRef.current.addEventListener("slidechange", (e) => {
+      console.log("slide changed");
+    });
+  }, []);
+
+  return (
+    <swiper-container
+      ref={swiperElRef}
+      slides-per-view="4"
+      navigation="true"
+      pagination="true"
+      space-between="10"
+    >
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+      <swiper-slide>
+        <TourCard />
+      </swiper-slide>
+    </swiper-container>
+  );
+};

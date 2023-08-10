@@ -18,7 +18,7 @@ const Ecosystem = () => {
           </h1>
           <div className="mt-16  grid grid-cols-1 md:grid-cols-4 gap-5">
             <div className="text-center md:text-start">
-              <h5 className="font-bold text-3xl">AI Model</h5>
+              <h5 className="font-bold text-2xl">AI Model</h5>
               <p className="mt-5 text-lg">
                 GreenGPT is an advanced AI model designed to help with crypto &
                 blockchain needs, code contracts, explain concepts, answer
@@ -33,7 +33,7 @@ const Ecosystem = () => {
                   <GiVintageRobot size={32} className="m-5 text-white" />
                 </button>
               </div>
-              <h5 className="font-bold md:text-3xl mt-3">Auto Generator</h5>
+              <h5 className="font-bold md:text-2xl mt-3">Auto Generator</h5>
               <p className="text-slate-500 md:mt-5 md:text-lg">
                 $gGPT is the utility token behind the GreenGPT ecosystem. It is
                 ultimately how community access the AI model, GreenGPT, and
@@ -59,7 +59,7 @@ const Ecosystem = () => {
                   <GrTask size={32} className="m-5 text-white" />
                 </button>
               </div>
-              <h5 className="font-bold  md:text-3xl  mt-3">Tailor Made</h5>
+              <h5 className="font-bold  md:text-2xl  mt-3">Tailor Made</h5>
               <p className="text-slate-500 md:mt-5 md:text-lg">
                 <span className="font-bold">Answer to earn</span> is a mode in
                 GreenGTP ecosystem where users earn $gGPT by answering questions
@@ -84,7 +84,7 @@ const Ecosystem = () => {
                   <GrArticle size={32} className="m-5 text-white" />
                 </button>
               </div>
-              <h5 className="font-bold md:text-3xl  mt-3">Create Itinerary</h5>
+              <h5 className="font-bold md:text-2xl  mt-3">Create Itinerary</h5>
               <p className="text-slate-500 md:mt-5 md:text-lg">
                 GreenGPT marketplace is a platform that enables the buying,
                 selling, and trading of non-fungible tokens (NFTs), which are
