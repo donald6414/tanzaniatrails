@@ -1,7 +1,13 @@
 import React from "react";
 // import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-import { ImageSlider, RelatedFeatured, Title, Title2 } from "../components";
+import {
+  Accordion,
+  ImageSlider,
+  RelatedFeatured,
+  Title,
+  Title2,
+} from "../components";
 import {
   FaCalendarAlt,
   FaCheck,
@@ -49,7 +55,7 @@ const SingleTour = () => {
 
         {/**Details Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="col-span-2 bg-white rounded-lg shadow p-5 space-y-5">
+          <div className="col-span-2 bg-white rounded-lg shadow p-5 space-y-10">
             <div className="bg-gradient-to-r from-[#e7ecef29] via-[#e1e7ea] to-[#e7ecef29]">
               <div className="grid grid-cols-4 gap-5 py-5">
                 <a
@@ -153,13 +159,78 @@ const SingleTour = () => {
             </div>
 
             {/**Itenerary */}
-            <div className="">
+            <div className="space-y-3">
               <Title title={"Itenerary"} locate={"start"} />
+              <div>
+                <Accordion />
+                <div tabIndex={0} className="collapse group mt-3">
+                  <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
+                    Day1: Arrval at KIA.
+                  </div>
+                  <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
+                    <p className="p-5">
+                      GreenGPT is a new community owned project inspired by
+                      chainGPT with contract address deploy by chainGPT, audited
+                      by chainGPT AI module, it combines AI and blockchain to
+                      create a decentralized platform for environmental
+                      sustainability
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/**Pricing */}
-            <div className="">
+            <div className="space-y-3">
               <Title title={"Pricing"} locate={"start"} />
+              <div className="">
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Season
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Months
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Price
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">High</td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          January, February, July, August, September
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          $ 3049.99
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap">Low</td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          March, April, May, October, November
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          $ 3049.99
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/**Reviews */}

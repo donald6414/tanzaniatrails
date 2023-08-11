@@ -22,6 +22,7 @@ import { TourCategories } from "./Categories";
 import { PackageSlider } from "./PackageSlider";
 import { ImageSlider } from "./ImageSlider";
 import { TrustedCat } from "./Categories";
+import { Accordion } from "./Accordion";
 
 export {
   NavBar,
@@ -55,4 +56,5 @@ export {
   TourCategories,
   PackageSlider,
   ImageSlider,
+  Accordion,
 };
