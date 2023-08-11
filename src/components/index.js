@@ -23,6 +23,7 @@ import { PackageSlider } from "./PackageSlider";
 import { ImageSlider } from "./ImageSlider";
 import { TrustedCat } from "./Categories";
 import { Accordion } from "./Accordion";
+import { ReviewForm, ReviewCard } from "./Reviews";
 
 export {
   NavBar,
@@ -57,4 +58,6 @@ export {
   PackageSlider,
   ImageSlider,
   Accordion,
+  ReviewForm,
+  ReviewCard,
 };

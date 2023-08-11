@@ -419,6 +419,219 @@ export const toursData = [
       },
     ],
   },
+  {
+    id: 5,
+    code: "TZA-006", // Tour code number
+    title: "Shira Route: Kilimanjaro's Scenic Traverse",
+    description:
+      "Embark on an epic climb through the Shira route, experiencing the vast landscapes of Kilimanjaro and summiting its majestic peak.",
+    types: ["Mountain Trekking", "Adventure"],
+    duration: 8,
+    itinerary: [
+      {
+        day: 1,
+        title: "Drive to Shira Gate & Trek to Shira Camp 1",
+        description:
+          "From Arusha, drive to Shira Gate. Begin the trek through the heath zone to Shira Camp 1.",
+        image: "shira-start.jpg",
+        accommodation: "Shira Camp 1",
+        meals: "Dinner",
+      },
+      {
+        day: 2,
+        title: "To Shira Camp 2",
+        description:
+          "Trek across the Shira plateau, enjoying views of Kibo peak.",
+        image: "shira-plateau.jpg",
+        accommodation: "Shira Camp 2",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 3,
+        title: "To Lava Tower & Barranco Camp",
+        description:
+          "Ascend to Lava Tower for acclimatization, then descend to Barranco Camp through the unique senecio forest.",
+        image: "lava-tower.jpg",
+        accommodation: "Barranco Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 4,
+        title: "To Karanga Camp",
+        description:
+          "Climb the Barranco Wall, offering panoramic views, and descend into the Karanga Valley.",
+        image: "karanga-valley.jpg",
+        accommodation: "Karanga Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 5,
+        title: "To Barafu Camp",
+        description:
+          "Trek to Barafu Camp and prepare for the summit attempt. Rest and enjoy views of Mawenzi peak.",
+        image: "barafu-camp.jpg",
+        accommodation: "Barafu Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 6,
+        title: "Summit Day & To Mweka Camp",
+        description:
+          "Start early for the summit, reaching Uhuru Peak by sunrise. Celebrate, then begin the descent to Mweka Camp.",
+        image: "uhuru-peak.jpg",
+        accommodation: "Mweka Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 7,
+        title: "Descent to Mweka Gate",
+        description:
+          "Complete your descent through the rainforest to Mweka Gate. Reflect on your achievement!",
+        image: "mweka-forest.jpg",
+        accommodation: "N/A",
+        meals: "Breakfast, Lunch",
+      },
+      {
+        day: 8,
+        title: "Departure from Arusha",
+        description:
+          "After a night of rest in Arusha, prepare for your onward journey or flight, taking with you memories of a lifetime.",
+        image: "arusha-departure.jpg",
+        accommodation: "N/A",
+        meals: "Breakfast",
+      },
+    ],
+    seasons: [
+      {
+        name: "High Season",
+        months: ["January", "February", "July", "August", "September"],
+        price: 3349.99,
+      },
+      {
+        name: "Low Season",
+        months: ["March", "April", "May", "October", "November"],
+        price: 3049.99,
+      },
+    ],
+    image: "shira-kilimanjaro.jpg",
+    reviews: [
+      {
+        user: "Noah Taylor",
+        rating: 4.9,
+        comment:
+          "The landscapes on the Shira route were breathtaking. It was challenging but truly rewarding.",
+      },
+      {
+        user: "Emma Wilson",
+        rating: 4.8,
+        comment:
+          "This was a bucket-list adventure! The beauty of Kilimanjaro is unparalleled.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    tourCode: "TZA-007",
+    title: "Machame Route Kilimanjaro Ascent",
+    description:
+      "Experience one of the most popular and scenic routes to the peak of Mount Kilimanjaro via the Machame Route, also known as the Whiskey Route. This challenging route offers a unique trekking experience with stunning views and varied landscapes.",
+    types: ["Mountain Trekking", "Adventure", "Nature Exploration"],
+    duration: 7, // in days
+    itinerary: [
+      {
+        day: 1,
+        title: "Journey Start",
+        description:
+          "Arrival in Tanzania, transfer to Machame gate and begin ascent. Camp at Machame camp.",
+        image: "machame-day1.jpg",
+        accommodation: "Machame Camp",
+        meals: "Dinner",
+      },
+      {
+        day: 2,
+        title: "Machame Camp to Shira Camp",
+        description:
+          "Ascend through rainforest and into moorland. Reach the Shira Plateau and camp at Shira Camp.",
+        image: "machame-day2.jpg",
+        accommodation: "Shira Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 3,
+        title: "Shira Camp to Barranco Camp",
+        description:
+          "Trek eastward through semi-desert areas and view the stunning Kibo massif. Descent to Barranco Camp.",
+        image: "machame-day3.jpg",
+        accommodation: "Barranco Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 4,
+        title: "Barranco Camp to Barafu Camp",
+        description:
+          "Climb the Barranco Wall and traverse the southern circuit. Reach the Barafu Camp and prepare for summit attempt.",
+        image: "machame-day4.jpg",
+        accommodation: "Barafu Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 5,
+        title: "Summit Day",
+        description:
+          "Start early for the summit attempt. Reach Uhuru Peak, the highest point in Africa. Descend to Mweka Camp.",
+        image: "machame-day5.jpg",
+        accommodation: "Mweka Camp",
+        meals: "Breakfast, Lunch, Dinner",
+      },
+      {
+        day: 6,
+        title: "Descent to Mweka Gate",
+        description:
+          "Descend through the rainforest to Mweka Gate. Transfer to the hotel.",
+        image: "machame-day6.jpg",
+        accommodation: "Hotel in Moshi/Arusha",
+        meals: "Breakfast, Lunch",
+      },
+      {
+        day: 7,
+        title: "Departure",
+        description:
+          "Rest at the hotel or explore the nearby town. Departure in the evening.",
+        image: "machame-day7.jpg",
+        accommodation: "N/A",
+        meals: "Breakfast",
+      },
+    ],
+    seasons: [
+      {
+        name: "High Season",
+        months: ["January", "February", "July", "August", "September"],
+        price: 2999.99,
+      },
+      {
+        name: "Low Season",
+        months: ["March", "April", "May", "October", "November", "December"],
+        price: 2699.99,
+      },
+    ],
+    image: "machame-route.jpg",
+    reviews: [
+      {
+        user: "Carlos Rodriguez",
+        rating: 4.9,
+        comment:
+          "A truly spectacular journey. Machame route was both challenging and rewarding.",
+        date: "2023-05-12",
+      },
+      {
+        user: "Linda Mwezi",
+        rating: 4.8,
+        comment:
+          "The views were breathtaking. A once-in-a-lifetime experience!",
+        date: "2023-07-08",
+      },
+    ],
+  },
 ];
 
 export const footerData = {

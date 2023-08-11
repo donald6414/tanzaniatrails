@@ -3,8 +3,11 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import {
   Accordion,
+  BookingForm,
   ImageSlider,
   RelatedFeatured,
+  ReviewCard,
+  ReviewForm,
   Title,
   Title2,
 } from "../components";
@@ -16,8 +19,24 @@ import {
   FaUserAlt,
   FaTimes,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SingleTour = () => {
+  const sampleReview = [
+    {
+      user: "John Doe",
+      rating: 4.5,
+      comment: "A fantastic experience! Will definitely recommend.",
+      date: "August 11, 2023",
+    },
+    {
+      user: "Ariela Doe",
+      rating: 5,
+      comment: "A fantastic experience! Will definitely recommend.",
+      date: "July 11, 2023",
+    },
+  ];
+
   return (
     <div className="bg-slate-100 py-10 md:py-24">
       <div className="container mx-auto px-5 md:px-24 space-y-10">
@@ -55,6 +74,7 @@ const SingleTour = () => {
 
         {/**Details Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/**Details Overview section */}
           <div className="col-span-2 bg-white rounded-lg shadow p-5 space-y-10">
             <div className="bg-gradient-to-r from-[#e7ecef29] via-[#e1e7ea] to-[#e7ecef29]">
               <div className="grid grid-cols-4 gap-5 py-5">
@@ -236,11 +256,50 @@ const SingleTour = () => {
             {/**Reviews */}
             <div className="">
               <Title title={"Reviews"} locate={"start"} />
+              <div className="">
+                {/* <ReviewForm /> */}
+                {sampleReview.map((review, index) => {
+                  return <ReviewCard key={index} review={review} />;
+                })}
+              </div>
             </div>
           </div>
 
-          <div className=" bg-white rounded-lg shadow p-5">
-            <h1>Booking staffs</h1>
+          {/**Form  Section */}
+          <div className="space-y-10">
+            <div className="">
+              <div className="p-2 bg-white shadow-md text-center rounded-lg space-y-4">
+                <h5>Starting From</h5>
+                <h1 className=" font-bold text-4xl ">$ 3000</h1>
+              </div>
+              <BookingForm price={3000} />
+            </div>
+            <div className="">
+              <button
+                type="submit"
+                className="btn bg-[#683e12] hover:bg-[#683e12] text-white py-2 rounded-full w-full animate-pulse"
+              >
+                Get Itenerary
+              </button>
+            </div>
+
+            <div className="flex flex-col items-center justify-center  bg-[#683e12] hover:bg-[#51300d] rounded-lg drop-shadow py-10">
+              <Title2 title={"Don't Miss A Chance"} color={"white"} />
+              <div className="mt-10 flex flex-col space-y-5">
+                <Link
+                  to={"/tailor-made"}
+                  className="btn bg-white text-[#683e12] hover:bg-slate-200 rounded-full  border-none"
+                >
+                  Customize Your Safari
+                </Link>
+                <Link
+                  to={"/generate-itinerary"}
+                  className="btn  bg-white text-[#683e12] hover:bg-slate-200 rounded-full  border-none"
+                >
+                  Generate Itinerary
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
