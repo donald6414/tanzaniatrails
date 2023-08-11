@@ -9,19 +9,28 @@ import { ButtonHover, Button } from "./Buttons";
 import { BookingHorizontal, BookingVertical, BookingForm } from "./Booking";
 import { Heading, Title, Title2, Paragraph } from "./Title";
 import { SelectionDate, SelectionBook, Selection } from "./Selection";
-import { BeachFeatured, TrekkingFeatured, Featured } from "./Featured";
+import {
+  BeachFeatured,
+  TrekkingFeatured,
+  RelatedFeatured,
+  Featured,
+} from "./Featured";
 import { Destinations } from "./Destinations";
 import { TourCard, PackageCard } from "./PackageCard";
 import { NewsLetter } from "./NewsLetter";
 import { TourCategories } from "./Categories";
 import { PackageSlider } from "./PackageSlider";
+import { ImageSlider } from "./ImageSlider";
+import { TrustedCat } from "./Categories";
 
 export {
   NavBar,
   FAQs,
   GreenGPTAI,
+  RelatedFeatured,
   Operation,
   Ecosystem,
+  TrustedCat,
   Footer,
   Hero,
   ButtonHover,
@@ -45,4 +54,5 @@ export {
   NewsLetter,
   TourCategories,
   PackageSlider,
+  ImageSlider,
 };

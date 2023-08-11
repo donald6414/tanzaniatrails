@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Marketplace from "./Marketplace";
+
 import Stake from "./Stake";
 import GreenGPT from "./GreenGPT";
 import A2e from "./A2e";
@@ -8,6 +8,7 @@ import Terms from "./Terms";
 import Privacy from "./Privacy";
 import Jobs from "./Jobs";
 import Tokenomics from "./Tokenomics";
+import SingleTour from "./SingleTour";
 
 export {
   Home,
@@ -18,6 +19,6 @@ export {
   Error,
   A2e,
   GreenGPT,
+  SingleTour,
   Tokenomics,
-  Marketplace,
 };

@@ -8,6 +8,7 @@ import {
   Hero,
   TourCategories,
   TrekkingFeatured,
+  TrustedCat,
 } from "../components";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <TourCategories />
       <Featured />
+      <TrustedCat />
       <BeachFeatured />
       <TrekkingFeatured />
       <Ecosystem />

@@ -5,12 +5,12 @@ import {
   Error,
   Home,
   Jobs,
-  Marketplace,
   Privacy,
   Stake,
   Terms,
   GreenGPT,
   Tokenomics,
+  SingleTour,
 } from "./pages";
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/SingleTour" element={<SingleTour />} />
           <Route path="/stake" element={<Stake />} />
           <Route path="/a2e" element={<A2e />} />
           <Route path="/terms" element={<Terms />} />

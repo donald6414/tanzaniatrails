@@ -4,7 +4,6 @@ import { PackageCard, TourCard } from "./PackageCard";
 import { Link } from "react-router-dom";
 import { FaBackward, FaForward } from "react-icons/fa";
 import { PackageSlider } from "./PackageSlider";
-import { useSwiper } from "swiper/react";
 export const Featured = () => {
   return (
     <div className="bg-slate-100 md:pb-24 py-10">
@@ -64,7 +63,7 @@ export const Featured = () => {
 
 export const BeachFeatured = () => {
   return (
-    <div className="w-full  bg-[url('https://placekitten.com/1400')] bg-cover bg-center ">
+    <div className="w-full  bg-[url('https://travellersworldwide.com/wp-content/uploads/2023/01/Shutterstock_1362361406.jpg.webp')] bg-cover bg-center ">
       <div className="w-full  backdrop-brightness-50">
         <div className="container mx-auto px-5 md:py-24 py-10 ">
           <div className="flex items-center justify-between">
@@ -201,23 +200,18 @@ export const TrekkingFeatured = () => {
   );
 };
 
-export const PopularFeatured = () => {
+export const RelatedFeatured = () => {
   return (
-    <div className="bg-slate-100 py-10">
+    <div className="bg-slate-100">
       <div className="container mx-auto px-5">
-        <Title title={"Featured Tours"} locate={"start"} />
+        <Title title={"Related Tours"} locate={"start"} />
         <Paragraph
           content={"Most recommended tours on this season."}
           locate={"start"}
           color={"slate-500"}
         />
-        <div className="mt-5 flex md:flex-row items-center  flex-wrap gap-5 md:w-1/3">
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
+        <div className="mt-5">
+          <PackageSlider />
         </div>
       </div>
     </div>
