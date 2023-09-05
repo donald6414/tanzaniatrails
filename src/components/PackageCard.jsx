@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { toursData } from "../constants";
 import { FaChevronRight, FaHeart, FaStar } from "react-icons/fa";
 import { GiVintageRobot } from "react-icons/gi";
+import SingleTour from "../pages/SingleTour";
 
 export const EcosystemCard = ({ title, content, to, bargeText }) => {
   return (
@@ -111,13 +112,19 @@ export const TourCard1 = ({ tour }) => {
   );
 };
 
-export const TourCard = () => {
+export const TourCard = ({ item }) => {
+  if (item === undefined) {
+    return null;
+  }
+
+  const url = "https://api.tanzaniatrails.co.tz/" + item.image_url;
+
   return (
     <div className="shadow-md hover:drop-shadow-lg">
       <div className="flex flex-col">
         <div className="relative">
           <img
-            src="https://www.serengetiparktanzania.com/wp-content/uploads/2021/01/Serengeti-National-Park-Tanzania.jpg"
+            src={url}
             alt="tour card"
             className="h-96 w-full object-cover content-center rounded-lg"
           />
@@ -142,9 +149,13 @@ export const TourCard = () => {
             {/** safari reviews  */}
             <div className="-mt-8 flex items-center justify-between ">
               <h1 className="font-bold text-xs flex items-center ">
-                <Link className="text-white">Arusha </Link>
+                <Link className="text-white">
+                  {item.package_getting_there.tour_start.title}
+                </Link>
                 <FaChevronRight className="text-xs mx-2 text-white" />
-                <Link className="text-white">Serengeti </Link>
+                <Link className="text-white">
+                  {item.package_getting_there.tour_end.title}
+                </Link>
               </h1>
               <span className="flex items-center bg-[#683e12] p-1 px-2 rounded-full ">
                 <FaStar className="text-xs mr-2" />
@@ -154,18 +165,22 @@ export const TourCard = () => {
             {/** safari title */}
             <div className="py-5 text-white">
               <Link className="font-bold text-xl text-white ">
-                Best Kilimanjaro Luxury
+                {item.title}
               </Link>
-              <h1 className="font-bold text-sm">5 Days / 4 Nights</h1>
+              <h1 className="font-bold text-sm">
+                {item.no_of_days} Days / {item.no_of_days - 1} Night{" "}
+              </h1>
             </div>
             {/** safari types */}
             <div className="pb-3 flex flex-wrap gap-2">
               <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
-                <h1 className="font-bold text-sm px-2">Mid Range</h1>
+                <h1 className="font-bold text-sm px-2">
+                  {item.package_level.title}
+                </h1>
               </Link>
-              <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
+              {/* <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
                 <h1 className="font-bold text-sm px-2">Luxury</h1>
-              </Link>
+              </Link> */}
               {/* <Link className="border-2 border-gray-500 bg-gray-400  text-white p-1 rounded-full">
                 <h1 className="font-bold text-sm px-2">Mid Range</h1>
               </Link> */}
@@ -173,9 +188,9 @@ export const TourCard = () => {
             {/** price & details */}
             <div className="border-slate-100 border-t-2 text-white">
               <div className="flex items-center justify-between mt-2">
-                <h5 className="font-bold text-xl">$ 1800</h5>
+                <h5 className="font-bold text-xl">$ {item.price}</h5>
                 <Link
-                  to={"/singletour"}
+                  to={`/singletour/${item.id}`}
                   className=" text-lg flex items-center text-white"
                 >
                   Details

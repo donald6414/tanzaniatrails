@@ -3,22 +3,27 @@ import { CgChevronLeftO, CgChevronRightO } from "react-icons/cg";
 import { Title2 } from "./Title";
 import { Link } from "react-router-dom";
 
-export const ImageSlider = () => {
+export const ImageSlider = ({ item }) => {
   const slider = [
     {
-      url: "https://nationalparks-15bc7.kxcdn.com/images/parks/serengeti/Serengeti%20National%20Park%20zebra%20and%20wildebeest.jpg",
+      url:
+        "https://api.tanzaniatrails.co.tz/" + item.package_gallery[0].image_url,
     },
     {
-      url: "https://africaadventurevacations.com/wp-content/uploads/2022/01/Top-ten-Serengeti-National-Park-safari-activities.jpg",
+      url:
+        "https://api.tanzaniatrails.co.tz/" + item.package_gallery[1].image_url,
     },
     {
-      url: "https://africa-safari.com/wp-content/uploads/Extension-to-Zanzibar.jpg",
+      url:
+        "https://api.tanzaniatrails.co.tz/" + item.package_gallery[2].image_url,
     },
     {
-      url: "https://www.serengeti.com/assets/img/safari-serengeti-national-park.jpg",
+      url:
+        "https://api.tanzaniatrails.co.tz/" + item.package_gallery[3].image_url,
     },
     {
-      url: "https://sethbutera.com/wp-content/uploads/2021/04/serengeti-national-park-1.jpg",
+      url:
+        "https://api.tanzaniatrails.co.tz/" + item.package_gallery[4].image_url,
     },
   ];
 
@@ -47,17 +52,19 @@ export const ImageSlider = () => {
       {/**Title */}
       <div className="absolute left-5 bottom-5 space-y-5">
         <Title2
-          title={"Kilimanjaro Honey Moon Point to point."}
+          title={item.title}
           locate={"start"}
           className={"text-white md:text-3xl drop-shadow-lg"}
         />
         <div className=" flex flex-wrap gap-2 ">
           <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
-            <h1 className="font-bold text-sm px-2">Mid Range</h1>
+            <h1 className="font-bold text-sm px-2">
+              {item.package_level.title}
+            </h1>
           </Link>
-          <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
+          {/* <Link className="border-2 border-gray-500 p-1 rounded-full  bg-gray-400  text-white">
             <h1 className="font-bold text-sm px-2">Luxury</h1>
-          </Link>
+          </Link> */}
         </div>
       </div>
 

@@ -20,7 +20,7 @@ export default function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/SingleTour" element={<SingleTour />} />
+          <Route path="/SingleTour/:id" element={<SingleTour />} />
           <Route path="/stake" element={<Stake />} />
           <Route path="/a2e" element={<A2e />} />
           <Route path="/terms" element={<Terms />} />

@@ -1,5 +1,6 @@
 import React from "react";
 // import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { useRef, useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import {
   Accordion,
@@ -19,9 +20,46 @@ import {
   FaUserAlt,
   FaTimes,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
+
+import DownArrow from "../assets/down-arrow.png";
 
 const SingleTour = () => {
+  const { id } = useParams();
+
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const apiUrl = `https://api.tanzaniatrails.co.tz/api/package/${id}`;
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (data.id === undefined) {
+    return (
+      <div className="flex justify-center items-center">
+        <ClipLoader
+          color={"#683e12"}
+          loading={true}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+    );
+  }
+
+  console.log(data.title);
   const sampleReview = [
     {
       user: "John Doe",
@@ -43,7 +81,7 @@ const SingleTour = () => {
         {/**Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
           <div className="col-span-3 bg-white rounded-lg shadow ">
-            <ImageSlider />
+            <ImageSlider item={data} />
           </div>
           {/**Tour Summary */}
           <div className=" bg-white rounded-lg shadow p-5 relative">
@@ -51,7 +89,9 @@ const SingleTour = () => {
             <div className="flex  flex-wrap justify-start  md:flex-col space-y-5 space-x-2 md:space-x-0">
               <div className="flex items-center space-x-2">
                 <FaCalendarAlt size={24} />
-                <h5>6 Days / 4 Nights</h5>
+                <h5>
+                  {data.no_of_days} Days / {data.no_of_days - 1} Nights
+                </h5>
               </div>
               <div className="flex items-center space-x-2">
                 <FaStar size={24} />
@@ -108,46 +148,24 @@ const SingleTour = () => {
             </div>
 
             {/**Overview */}
-            <div className="space-y-3">
+            <div id="Overview" className="space-y-3">
               <Title title={"Overview"} locate={"start"} />
-              <p>
-                Start and end in Moshi! With the Hiking & Trekking tour
-                Kilimanjaro climbing machame route 7 days, you have a 7 days
-                tour package taking you through Moshi, Tanzania and 6 other
-                destinations in Tanzania. Kilimanjaro climbing machame route 7
-                days includes accommodation, an expert guide, meals, transport
-                and more.
-              </p>
+              <p className="text-justify">{data.description}</p>
               <div className="grid grid-cols-2  ">
                 <div className="border-2 border-gray-400 p-2 rounded-l-lg">
                   <Title2 title={"Included"} className="pb-3" />
                   <div className="flex flex-col justify-start space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <FaCheck size={16} />
-                      <h5>Transport arrival and depature.</h5>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FaCheck size={16} />
-                      <h5>Accomodations as booked in inquiry.</h5>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FaCheck size={16} />
-                      <h5>Meals that is breakfasts, lunched and dinner.</h5>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FaCheck size={16} />
-                      <h5>
-                        All entrance fees and activities mentioned in the
-                        itinerary.
-                      </h5>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FaCheck size={16} />
-                      <h5>All park fees and government taxes.</h5>
-                    </div>
+                    {data.package_inclusions.map((each) => {
+                      return (
+                        <div className="flex items-center space-x-2 content-center justify-self-center">
+                          <FaCheck size={16} />
+                          <h5>{each.tour_notes.title}</h5>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
-                <div className="border-2 border-gray-400 p-2 rounded-r-lg">
+                {/* <div className="border-2 border-gray-400 p-2 rounded-r-lg">
                   <Title2 title={"Excluded"} className="pb-3" />
                   <div className="flex flex-col justify-start space-y-2">
                     <div className="flex items-center space-x-2">
@@ -174,34 +192,43 @@ const SingleTour = () => {
                       <h5>All park fees and government taxes.</h5>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/**Itenerary */}
-            <div className="space-y-3">
+            <div id="Itenerary" className="space-y-3">
               <Title title={"Itenerary"} locate={"start"} />
-              <div>
-                <Accordion />
-                <div tabIndex={0} className="collapse group mt-3">
-                  <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content">
-                    Day1: Arrval at KIA.
+
+              {data.package_days.map((each) => {
+                return (
+                  <div>
+                    {/* <Accordion /> */}
+                    <div tabIndex={0} className="collapse group mt-3">
+                      <div className="collapse-title bg-base-200 p-5 font-bold text-lg text-primary-content group-focus:bg-[#683e12] group-focus:text-secondary-content flex flex-row justify-between ">
+                        Day {each.day_no}: {each.title}{" "}
+                        <div>
+                          <img
+                            src={DownArrow}
+                            alt="Arro down"
+                            className="h-18 w-18 object-cover content-center rounded-lg"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
+                        <p className="p-5 text-justify">
+                          {each.day_description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="collapse-content bg-base-200 text-slate-900 group-focus:bg-base-200 group-focus:text-slate-900">
-                    <p className="p-5">
-                      GreenGPT is a new community owned project inspired by
-                      chainGPT with contract address deploy by chainGPT, audited
-                      by chainGPT AI module, it combines AI and blockchain to
-                      create a decentralized platform for environmental
-                      sustainability
-                    </p>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
 
             {/**Pricing */}
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <Title title={"Pricing"} locate={"start"} />
               <div className="">
                 <div className="overflow-x-auto">
@@ -251,10 +278,10 @@ const SingleTour = () => {
                   </table>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/**Reviews */}
-            <div className="">
+            <div id="Reviews" className="">
               <Title title={"Reviews"} locate={"start"} />
               <div className="">
                 {/* <ReviewForm /> */}
@@ -270,7 +297,7 @@ const SingleTour = () => {
             <div className="">
               <div className="p-2 bg-white shadow-md text-center rounded-lg space-y-4">
                 <h5>Starting From</h5>
-                <h1 className=" font-bold text-4xl ">$ 3000</h1>
+                <h1 className=" font-bold text-4xl ">$ {data.price}</h1>
               </div>
               <BookingForm price={3000} />
             </div>

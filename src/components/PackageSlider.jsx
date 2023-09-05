@@ -1,11 +1,31 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { TourCard } from "./PackageCard";
+import axios from "axios";
+import ClipLoader from "react-spinners/ClipLoader";
 
 register();
 
 export const PackageSlider = () => {
   const swiperElRef = useRef(null);
+
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const apiUrl = "https://api.tanzaniatrails.co.tz/api/get_popular_packages";
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
 
   useEffect(() => {
     // listen for Swiper events using addEventListener
@@ -19,6 +39,20 @@ export const PackageSlider = () => {
     });
   }, []);
 
+  if (data === null) {
+    return (
+      <div className="flex justify-center items-center">
+        <ClipLoader
+          color={"#683e12"}
+          loading={true}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+    );
+  }
+
   return (
     <swiper-container
       ref={swiperElRef}
@@ -27,24 +61,15 @@ export const PackageSlider = () => {
       pagination="true"
       space-between="10"
     >
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
-      <swiper-slide>
-        <TourCard />
-      </swiper-slide>
+      {data
+        ? data.map((item) => {
+            return (
+              <swiper-slide>
+                <TourCard item={item} />
+              </swiper-slide>
+            );
+          })
+        : ""}
     </swiper-container>
   );
 };
