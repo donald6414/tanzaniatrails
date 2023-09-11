@@ -22,7 +22,7 @@ const NavBar = () => {
                 <li>
                   <Link to={"/tokenomics"}>Home</Link>
                 </li>
-                <li tabIndex={0}>
+                {/* <li tabIndex={0}>
                   <a className="justify-between">
                     Solutions
                     <FiChevronDown className="font-bold" />
@@ -66,7 +66,7 @@ const NavBar = () => {
                       <Link to={"/stake"}>Stake NFT</Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 <li>
                   <Link to={"/blog"}>Blog</Link>
                 </li>
@@ -93,7 +93,7 @@ const NavBar = () => {
               <li>
                 <Link to={"/tokenomics"}>Home</Link>
               </li>
-              <li tabIndex={0}>
+              {/* <li tabIndex={0}>
                 <a>
                   Solutions
                   <FiChevronDown className="font-bold" />
@@ -137,7 +137,7 @@ const NavBar = () => {
                     <Link to={"/stake"}>Stake NFT</Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <Link to={"/homestay"}>Home Stay</Link>
               </li>

@@ -1,6 +1,7 @@
 .backgroundImage {
   background-image: url("../assets/hero.jpg");
   background-size: cover;
+  bottom: 20px;
 }
 .service {
   padding: 30px;
@@ -12,4 +13,13 @@
 
 .Neno {
   color: #683e12 !important;
+}
+
+.Back {
+  background-color: #683e12 !important;
+  color: white !important;
+}
+
+.Rangi {
+  background-color: rgba(0, 0, 0, 0.7);
 }

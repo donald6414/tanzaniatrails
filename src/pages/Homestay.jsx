@@ -8,115 +8,6 @@ export default function Homestay() {
 
   return (
     <div>
-      <div class="relative">
-        <img
-          src={Hero}
-          class="absolute inset-0 object-cover w-full h-full"
-          alt=""
-        />
-        <div class="relative bg-gray-900 bg-opacity-75">
-          <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div class="flex flex-col items-center justify-between xl:flex-row">
-              <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                  The quick, brown fox <br class="hidden md:block" />
-                  jumps over a{" "}
-                  <span class="text-teal-accent-400">lazy dog</span>
-                </h2>
-                <p class="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                  quae.
-                </p>
-                <a
-                  href="#myDiv"
-                  aria-label=""
-                  class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
-                >
-                  Learn more
-                  <svg
-                    class="inline-block w-3 ml-2"
-                    fill="currentColor"
-                    viewBox="0 0 12 12"
-                  >
-                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
-                <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
-                  <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                    Register For Home Stay
-                  </h3>
-                  <form>
-                    <div class="mb-1 sm:mb-2">
-                      <label
-                        for="firstName"
-                        class="inline-block mb-1 font-medium"
-                      >
-                        First name
-                      </label>
-                      <input
-                        placeholder="John"
-                        required=""
-                        type="text"
-                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="firstName"
-                        name="firstName"
-                      />
-                    </div>
-                    <div class="mb-1 sm:mb-2">
-                      <label
-                        for="lastName"
-                        class="inline-block mb-1 font-medium"
-                      >
-                        Last name
-                      </label>
-                      <input
-                        placeholder="Doe"
-                        required=""
-                        type="text"
-                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="lastName"
-                        name="lastName"
-                      />
-                    </div>
-                    <div class="mb-1 sm:mb-2">
-                      <label for="email" class="inline-block mb-1 font-medium">
-                        E-mail
-                      </label>
-                      <input
-                        placeholder="john.doe@example.org"
-                        required=""
-                        type="text"
-                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="email"
-                        name="email"
-                      />
-                    </div>
-                    <div class="mt-4 mb-2 sm:mb-4">
-                      <button
-                        type="submit"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                      >
-                        Subscribe
-                      </button>
-                    </div>
-                    <p class="text-xs text-gray-600 sm:text-sm">
-                      We respect your privacy.
-                    </p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="service">
-        <Slider />
-      </div>
-
       <div className="service" id="myDiv">
         <div className="text-gray-900 pt-12 pr-0 pb-14 pl-0 bg-white">
           <div className="w-full pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
@@ -137,19 +28,21 @@ export default function Homestay() {
                     <p className="inline text-xs font-medium">New</p>
                   </div>
                   <a className="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl Neno">
-                    Write anything. Be creative.
+                    Welcome Home
                   </a>
                   <div className="pt-2 pr-0 pb-0 pl-0">
-                    <p className="text-sm font-medium inline">author:</p>
-                    <a className="inline text-sm font-medium mt-0 mr-1 mb-0 ml-1 underline">
-                      Jack Sparrow
-                    </a>
-                    <p className="inline text-sm font-medium mt-0 mr-1 mb-0 ml-1">
-                      · 23rd, April 2021 ·
+                    <p class="max-w-xl mb-4 text-base text-gray-400 md:text-lg text-justify">
+                      Discover the warmth of home away from home with Travel
+                      with us. Our carefully curated selection of cozy,
+                      comfortable, and unique accommodations offers you the
+                      chance to experience local culture and hospitality in a
+                      way that hotels simply can't match. Whether you're seeking
+                      a tranquil retreat, an immersive cultural experience, or a
+                      convenient stopover, our home stays have you covered.
+                      Explore our listings, find your perfect home away from
+                      home, and embark on unforgettable journeys with us.
                     </p>
-                    <p className="text-gray-200 text-sm font-medium inline mt-0 mr-1 mb-0 ml-1">
-                      1hr 20min. read
-                    </p>
+                    <span>Your Comfort, Our Priority.</span>
                   </div>
                 </div>
               </div>
@@ -253,6 +146,121 @@ export default function Homestay() {
                   <p className="inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1">
                     1hr 20min. read
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="service">
+        <Slider />
+      </div>
+
+      <div class="relative">
+        <img
+          src={Hero}
+          class="absolute inset-0 object-cover w-full h-full"
+          alt=""
+        />
+        <div class="relative bg-gray-900 bg-opacity-75">
+          <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="flex flex-col items-center justify-between xl:flex-row">
+              <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                  Welcome Home
+                  {/* <span class="text-teal-accent-400">lazy dog</span> */}
+                </h2>
+                <p class="max-w-xl mb-4 text-base text-gray-400 md:text-lg text-justify">
+                  Discover the warmth of home away from home with Travel with
+                  us. Our carefully curated selection of cozy, comfortable, and
+                  unique accommodations offers you the chance to experience
+                  local culture and hospitality in a way that hotels simply
+                  can't match. Whether you're seeking a tranquil retreat, an
+                  immersive cultural experience, or a convenient stopover, our
+                  home stays have you covered. Explore our listings, find your
+                  perfect home away from home, and embark on unforgettable
+                  journeys with us.
+                </p>
+                <span>Your Comfort, Our Priority.</span>
+                <a
+                  href="#myDiv"
+                  aria-label=""
+                  class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                >
+                  View Home
+                  <svg
+                    class="inline-block w-3 ml-2"
+                    fill="currentColor"
+                    viewBox="0 0 12 12"
+                  >
+                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+                <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
+                  <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
+                    Register For Home Stay
+                  </h3>
+                  <form>
+                    <div class="mb-1 sm:mb-2">
+                      <label
+                        for="firstName"
+                        class="inline-block mb-1 font-medium"
+                      >
+                        First name
+                      </label>
+                      <input
+                        placeholder="John"
+                        required=""
+                        type="text"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="firstName"
+                        name="firstName"
+                      />
+                    </div>
+                    <div class="mb-1 sm:mb-2">
+                      <label
+                        for="lastName"
+                        class="inline-block mb-1 font-medium"
+                      >
+                        Last name
+                      </label>
+                      <input
+                        placeholder="Doe"
+                        required=""
+                        type="text"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="lastName"
+                        name="lastName"
+                      />
+                    </div>
+                    <div class="mb-1 sm:mb-2">
+                      <label for="email" class="inline-block mb-1 font-medium">
+                        E-mail
+                      </label>
+                      <input
+                        placeholder="john.doe@example.org"
+                        required=""
+                        type="text"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="email"
+                        name="email"
+                      />
+                    </div>
+                    <div class="mt-4 mb-2 sm:mb-4">
+                      <button
+                        type="submit"
+                        class="Back inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                    <p class="text-xs text-gray-600 sm:text-sm">
+                      We respect your privacy.
+                    </p>
+                  </form>
                 </div>
               </div>
             </div>
