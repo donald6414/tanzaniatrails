@@ -1,0 +1,15 @@
+.backgroundImage {
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+}
+.service {
+  padding: 30px;
+}
+
+.volunteer {
+  margin-bottom: 40px;
+}
+
+.Neno {
+  color: #683e12 !important;
+}

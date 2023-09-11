@@ -71,7 +71,7 @@ const NavBar = () => {
                   <Link to={"/blog"}>Blog</Link>
                 </li>
                 <li>
-                  <Link to={"/contact"}>Contacts</Link>
+                  <Link to={"/volunteer"}>Volunteer</Link>
                 </li>
                 <li>
                   <h1>Book</h1>
@@ -139,10 +139,10 @@ const NavBar = () => {
                 </ul>
               </li>
               <li>
-                <Link to={"/blog"}>Blog</Link>
+                <Link to={"/homestay"}>Home Stay</Link>
               </li>
               <li>
-                <Link to={"/contact"}>Contacts</Link>
+                <Link to={"/volunteer"}>Volunteer</Link>
               </li>
             </ul>
           </div>

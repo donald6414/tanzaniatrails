@@ -9,6 +9,7 @@ import Privacy from "./Privacy";
 import Jobs from "./Jobs";
 import Tokenomics from "./Tokenomics";
 import SingleTour from "./SingleTour";
+import Homestay from "./Homestay";
 
 export {
   Home,
@@ -21,4 +22,5 @@ export {
   GreenGPT,
   SingleTour,
   Tokenomics,
+  Homestay
 };

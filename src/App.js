@@ -11,7 +11,9 @@ import {
   GreenGPT,
   Tokenomics,
   SingleTour,
+  Homestay,
 } from "./pages";
+import Volunteer from "./pages/Volunteer";
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/greengpt" element={<GreenGPT />} />
           <Route path="/tokenomics" element={<Tokenomics />} />
+          <Route path="/homestay" element={<Homestay />} />
+          <Route path="/volunteer" element={<Volunteer />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
