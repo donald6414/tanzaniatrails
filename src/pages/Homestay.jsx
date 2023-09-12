@@ -249,6 +249,37 @@ export default function Homestay() {
                         name="email"
                       />
                     </div>
+                    <div class="mb-1 sm:mb-2">
+                      <label for="email" class="inline-block mb-1 font-medium">
+                        Phone Number
+                      </label>
+                      <input
+                        placeholder="+255 xxx xxx xxx"
+                        required=""
+                        type="tel"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="email"
+                        name="email"
+                      />
+                    </div>
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        htmlFor="message"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        maxLength="300"
+                        name="feedback"
+                        id="feedback"
+                        rows="4"
+                        cols="80"
+                        className="border-0 px-3 py-3 bg-gray-300 placeholder-black text-gray-800 rounded text-sm shadow focus:outline-none w-full"
+                        placeholder=""
+                        required
+                      ></textarea>
+                    </div>
                     <div class="mt-4 mb-2 sm:mb-4">
                       <button
                         type="submit"

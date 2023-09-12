@@ -46,46 +46,61 @@ export default function Volunteer() {
                           <h4 className="text-2xl mb-4 text-black font-semibold">
                             Join now
                           </h4>
-                          <form id="feedbackForm" action="" method="">
-
-                          <div className="relative w-full mb-3">
+                          <form>
+                            <div class="mb-1 sm:mb-2">
                               <label
-                                className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                htmlFor="email"
+                                for="firstName"
+                                class="inline-block mb-1 font-medium text-black"
                               >
-                                Full name
+                                First name
                               </label>
                               <input
+                                placeholder="John"
+                                required=""
                                 type="text"
-                                name="name"
-                                id="name"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400"
-                                placeholder=" "
-                                required
+                                class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                id="firstName"
+                                name="firstName"
+                              />
+                            </div>
+                            <div class="mb-1 sm:mb-2">
+                              <label
+                                for="lastName"
+                                class="inline-block mb-1 font-medium text-black"
+                              >
+                                Last name
+                              </label>
+                              <input
+                                placeholder="Doe"
+                                required=""
+                                type="text"
+                                class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                id="lastName"
+                                name="lastName"
+                              />
+                            </div>
+                            <div class="mb-1 sm:mb-2">
+                              <label
+                                for="email"
+                                class="inline-block mb-1 font-medium text-black"
+                              >
+                                E-mail
+                              </label>
+                              <input
+                                placeholder="john.doe@example.org"
+                                required=""
+                                type="text"
+                                class="flex-grow w-full h-12 px-4 mb-2  transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                id="email"
+                                name="email"
                               />
                             </div>
                             <div className="relative w-full mb-3">
                               <label
-                                className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                htmlFor="email"
-                              >
-                                Email
-                              </label>
-                              <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400"
-                                placeholder=" "
-                                required
-                              />
-                            </div>
-                            {/* <div className="relative w-full mb-3">
-                              <label
-                                className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                className="block uppercase text-black text-xs font-bold mb-2"
                                 htmlFor="message"
                               >
-                                Message
+                                Why would like to Volunteer ?
                               </label>
                               <textarea
                                 maxLength="300"
@@ -97,17 +112,18 @@ export default function Volunteer() {
                                 placeholder=""
                                 required
                               ></textarea>
-                            </div> */}
-                            <div className="text-center mt-6">
+                            </div>
+                            <div class="mt-4 mb-2 sm:mb-4">
                               <button
-                                id="feedbackBtn"
-                                className="bg-yellow-300 Back text-white text-center mx-auto active:bg-yellow-400 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                                 type="submit"
-                                style={{ transition: "all 0.15s ease 0s" }}
+                                class="Back inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               >
-                                Submit
+                                Subscribe
                               </button>
                             </div>
+                            <p class="text-xs text-gray-600 sm:text-sm">
+                              We respect your privacy.
+                            </p>
                           </form>
                         </div>
                       </div>

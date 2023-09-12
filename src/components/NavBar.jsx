@@ -20,7 +20,7 @@ const NavBar = () => {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 text-slate-900 rounded-box  w-52"
               >
                 <li>
-                  <Link to={"/tokenomics"}>Home</Link>
+                  <Link to={"/"}>Home</Link>
                 </li>
                 {/* <li tabIndex={0}>
                   <a className="justify-between">
@@ -68,11 +68,12 @@ const NavBar = () => {
                   </ul>
                 </li> */}
                 <li>
-                  <Link to={"/blog"}>Blog</Link>
+                  <Link to={"/homestay"}>Home Stay</Link>
                 </li>
                 <li>
                   <Link to={"/volunteer"}>Volunteer</Link>
                 </li>
+
                 <li>
                   <h1>Book</h1>
                 </li>
@@ -88,10 +89,11 @@ const NavBar = () => {
               </h1>
             </Link>
           </div>
+
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link to={"/tokenomics"}>Home</Link>
+                <Link to={"/"}>Home</Link>
               </li>
               {/* <li tabIndex={0}>
                 <a>
@@ -143,6 +145,9 @@ const NavBar = () => {
               </li>
               <li>
                 <Link to={"/volunteer"}>Volunteer</Link>
+              </li>
+              <li>
+                <Link to={"/about"}>About</Link>
               </li>
             </ul>
           </div>

@@ -14,6 +14,7 @@ import {
   Homestay,
 } from "./pages";
 import Volunteer from "./pages/Volunteer";
+import AboutUs from "./pages/About";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/tokenomics" element={<Tokenomics />} />
           <Route path="/homestay" element={<Homestay />} />
           <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
