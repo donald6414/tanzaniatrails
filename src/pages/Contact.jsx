@@ -95,7 +95,7 @@ function ContactForm() {
             <div className="container mx-auto flex flex-col md:flex-row my-6 md:my-24">
               <div className="flex flex-col w-full lg:w-1/3 p-8">
                 <p className="text-3xl md:text-5xl my-4 leading-relaxed md:leading-snug">
-                  About Us - Travel With Us
+                  Travel With Us
                 </p>
                 <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100 text-justify">
                   Welcome to Travel With Us, your trusted partner for
@@ -134,7 +134,7 @@ function ContactForm() {
                       <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white">
                         <div className="flex-auto p-5 lg:p-10">
                           <h4 className="text-2xl mb-4 text-black font-semibold">
-                            Join now
+                            Contact us
                           </h4>
                           <div class="mb-1 sm:mb-2">
                             <label

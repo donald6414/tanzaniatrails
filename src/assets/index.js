@@ -1,4 +1,4 @@
-import Logo from "./logo.png";
+import Logo from './logo.png'
 import Bamba from "./partners/bamba.jpg";
 import DestinationServices from "./partners/destinationservices.jpg";
 import GAdventure from "./partners/gadventures.jpg";

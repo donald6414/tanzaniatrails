@@ -1,14 +1,19 @@
 .backgroundImage {
   background-image: url("../assets/hero.jpg");
   background-size: cover;
-  bottom: 20px;
+  bottom: 0px 0px 10px;
+  /* border-radius: 10px;
+  overflow: hidden; */
+
 }
 .service {
   padding: 30px;
 }
 
 .volunteer {
-  margin-bottom: 40px;
+  /* margin: 10px;
+  border-radius: 10px; */
+
 }
 
 .Neno {
@@ -41,6 +46,6 @@
   display: none;
 }
 
-.errorMessage{
+.errorMessage {
   color: red !important;
 }

@@ -15,12 +15,12 @@ const Footer = () => {
         <footer className=" footer p-10  text-slate-100 container mx-auto">
           <>
             {/**Logo */}
-            <div>
-              <img src={Logo} alt="logo" className="w-24 h-24" />
+            <div className="flex justify-center flex-col items-center">
+              <img src={Logo} alt="logo" className="w-50 h-24" />
               <p>
-                <span className="text-2xl mb-3 font-bold">
+                {/* <span className="text-2xl mb-3 font-bold">
                   TanzaniaTrails Co. Ltd.
-                </span>
+                </span> */}
                 <br />
                 Discover Your Next Adventure.
               </p>

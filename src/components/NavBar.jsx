@@ -83,10 +83,10 @@ const NavBar = () => {
               to={"/"}
               className="md:flex justify-center items-center hidden"
             >
-              <img src={Logo} alt="logo" className="w-10 h-10" />
-              <h1 className="normal-case text-2xl font-bold tracking-wide text-[#683e12] ml-2">
-                Tanzaniatrails
-              </h1>
+              <img src={Logo} alt="logo" className="w-50 h-10" />
+              {/* <h1 className="normal-case text-2xl font-bold tracking-wide text-[#683e12] ml-2">
+                Travel With Us
+              </h1> */}
             </Link>
           </div>
 
@@ -108,7 +108,7 @@ const NavBar = () => {
                     <Link to={"/a2e"}>Customize Safari</Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li tabIndex={0}>
                 <a>
                   Tours
@@ -139,7 +139,7 @@ const NavBar = () => {
                     <Link to={"/stake"}>Stake NFT</Link>
                   </li>
                 </ul>
-              </li> */}
+              </li>
               <li>
                 <Link to={"/homestay"}>Home Stay</Link>
               </li>
@@ -168,7 +168,7 @@ const NavBar = () => {
               to={"/"}
               className="flex justify-center items-center md:hidden "
             >
-              <img src={Logo} alt="logo" className="w-10 h-10" />
+              <img src={Logo} alt="logo" className="w-50 h-10" />
               <h1 className="normal-case text-2xl font-bold tracking-wide pr-3 text-[#683e12] ml-2">
                 Tanzaniatrails
               </h1>

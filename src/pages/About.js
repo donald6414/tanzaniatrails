@@ -1,30 +1,47 @@
 import React from "react";
 import "./homestay.css";
+import { TrustedCat } from "../components";
 
 const AboutUs = () => {
   return (
     <div className="bg-gray-200">
       <header className="py-8 px-4 bg-white">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center">About US</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-center">
+          About Travel With US
+        </h1>
       </header>
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8">Our Mission</h2>
-          <p className="text-gray-800 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            elementum augue sit amet enim tristique, non sagittis enim volutpat.
-            Ut et sem eu dui scelerisque hendrerit. Morbi tincidunt mollis enim,
-            sit amet luctus justo semper vitae. Duis sed ultricies orci. Sed
-            fermentum neque eu lacus consectetur, ut semper leo dictum. Aenean
-            in vehicula lectus, ac lacinia nunc.
+          <p className="text-gray-800 leading-relaxed text-justify my-4">
+            Travel With Us is the best Tour company that is dedicated to have
+            you explore the Wonders and Beauties of Nature within East Africa in
+            a very responsible manner. Based in Arusha, Tanzania – East Africa,
+            we boast to be a fully locally owned Tour Company. All the profits
+            generated from every booking, go directly to impact the local
+            communities that strive so hard to make a living and raise their
+            families in a positive manner. Our charming and ever smiling Team is
+            comprised of professionals who have over 20 years of experience in
+            the Tourism Industry. The various Tour Packages offered here could
+            as well be custom made to meet and exceed your thirst for Safari
+            experience. Marvel the annual Great Wildebeest Migration in the Vast
+            Serengeti plains and Maasai Mara in Kenya; Climb Mt. Kilimanjaro, to
+            the highest peak in Africa and one of the continent’s magnificent
+            sights; Relax on the Sandy beaches, Snorkel or Scuba dive in the
+            crystal clear reef waters of Zanzibar, Pemba and Mafia Islands;
+            taste the rich cultures of The ancient 120 tribes including The
+            Maasai and Hadzabe Bushmen tribes
           </p>
           <div className="text-center">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
-              Contact Us
-            </button>
+            <a href="/contact">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                Contact Us
+              </button>
+            </a>
           </div>
         </div>
       </section>
+      <TrustedCat />
       <section className="py-12 px-4 bg-gray-100">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">

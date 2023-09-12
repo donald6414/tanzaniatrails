@@ -7,7 +7,7 @@ export default function Volunteer() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="volunteer backgroundImage">
+    <div className="volunteer backgroundImage shadow-lg ">
       <div className="Rangi">
         <div className="text-white py-12">
           <div className="container mx-auto text-center">
