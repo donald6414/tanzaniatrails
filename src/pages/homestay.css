@@ -23,3 +23,24 @@
 .Rangi {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+.meetTeam {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contactUs {
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(104, 62, 18, 0.5) !important;
+}
+
+.NoerrorMessage {
+  display: none;
+}
+
+.errorMessage{
+  color: red !important;
+}

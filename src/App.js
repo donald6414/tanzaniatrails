@@ -15,6 +15,7 @@ import {
 } from "./pages";
 import Volunteer from "./pages/Volunteer";
 import AboutUs from "./pages/About";
+import ContactUs from "./pages/Contact";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/homestay" element={<Homestay />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
