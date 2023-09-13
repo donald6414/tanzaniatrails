@@ -2,8 +2,8 @@
   background-image: url("../assets/hero.jpg");
   background-size: cover;
   bottom: 0px 0px 10px;
-  /* border-radius: 10px;
-  overflow: hidden; */
+  border-radius: 10px;
+  overflow: hidden;
 
 }
 .service {
@@ -11,8 +11,8 @@
 }
 
 .volunteer {
-  /* margin: 10px;
-  border-radius: 10px; */
+  margin: 10px;
+  border-radius: 10px;
 
 }
 

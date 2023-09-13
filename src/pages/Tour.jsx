@@ -30,43 +30,110 @@ const subCategories = [
 ];
 const filters = [
   {
-    id: "Price",
-    name: "Price",
+    id: "Tour Levels",
+    name: "Tour Levels",
     options: [
       { value: "Any", label: "Any", checked: true },
-      { value: "< $1000", label: "< $ 1000", checked: false },
-      { value: "$ 2000 - $ 3000", label: "$ 2000 - $ 3000", checked: false },
-      { value: "$ 3000 - 4000", label: "$ 3000 - 4000", checked: false },
-      { value: "$ 5000 >", label: "$ 5000 >", checked: false },
+      { value: "Budget", label: "Budget", checked: false },
+      { value: "Luxury", label: "Luxury", checked: false },
+      { value: "Mid Range", label: "Mid Range", checked: false },
     ],
   },
+
   {
-    id: "category",
-    name: "Age Group",
+    id: "Tour Focus",
+    name: "Tour Focus",
     options: [
       { value: "Any", label: "Any", checked: true },
-      { value: "infant( 0 - 7)", label: "infant( 0 - 7)", checked: false },
-      { value: "child( 7 - 17)", label: "child( 7 - 17)", checked: false },
-      { value: "Adult(+ 18)", label: "Adult(+ 18)", checked: false },
       {
-        value: "Senior Citizen ( 65 +)",
-        label: "Senior Citizen ( 65 +)",
+        value: "Game drive safari",
+        label: "Game drive safari",
+        checked: false,
+      },
+      {
+        value: "Mountain climbing only",
+        label: "Mountain climbing only",
         checked: false,
       },
     ],
   },
+
   {
-    id: "Ratings",
-    name: "Ratings",
+    id: "Tour Activities",
+    name: "Tour Activities",
     options: [
       { value: "Any", label: "Any", checked: true },
-      { value: "1 star", label: "1 star", checked: false },
-      { value: "2 star", label: "2 star", checked: false },
-      { value: "3 star", label: "3 star", checked: false },
-      { value: "4 star", label: "4 star", checked: false },
-      { value: "5 star", label: "5 star", checked: false },
+      {
+        value: "Game drives",
+        label: "Game drives",
+        checked: false,
+      },
+      {
+        value: "Walking safaris",
+        label: "Walking safaris",
+        checked: false,
+      },
+      {
+        value: "Hike tour",
+        label: "Hike tour",
+        checked: false,
+      },
+      {
+        value: "Machame route",
+        label: "Machame route",
+        checked: false,
+      },
+      {
+        value: "Mount Kilimanjaro",
+        label: "Mount Kilimanjaro",
+        checked: false,
+      },
+      {
+        value: "Tanzania",
+        label: "Tanzania",
+        checked: false,
+      },
     ],
   },
+
+  // {
+  //   id: "Price",
+  //   name: "Price",
+  //   options: [
+  //     { value: "Any", label: "Any", checked: true },
+  //     { value: "< $1000", label: "< $ 1000", checked: false },
+  //     { value: "$ 2000 - $ 3000", label: "$ 2000 - $ 3000", checked: false },
+  //     { value: "$ 3000 - 4000", label: "$ 3000 - 4000", checked: false },
+  //     { value: "$ 5000 >", label: "$ 5000 >", checked: false },
+  //   ],
+  // },
+  // {
+  //   id: "category",
+  //   name: "Age Group",
+  //   options: [
+  //     { value: "Any", label: "Any", checked: true },
+  //     { value: "infant( 0 - 7)", label: "infant( 0 - 7)", checked: false },
+  //     { value: "child( 7 - 17)", label: "child( 7 - 17)", checked: false },
+  //     { value: "Adult(+ 18)", label: "Adult(+ 18)", checked: false },
+  //     {
+  //       value: "Senior Citizen ( 65 +)",
+  //       label: "Senior Citizen ( 65 +)",
+  //       checked: false,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "Ratings",
+  //   name: "Ratings",
+  //   options: [
+  //     { value: "Any", label: "Any", checked: true },
+  //     { value: "1 star", label: "1 star", checked: false },
+  //     { value: "2 star", label: "2 star", checked: false },
+  //     { value: "3 star", label: "3 star", checked: false },
+  //     { value: "4 star", label: "4 star", checked: false },
+  //     { value: "5 star", label: "5 star", checked: false },
+  //   ],
+  // },
 ];
 
 function classNames(...classes) {
@@ -124,8 +191,6 @@ export default function Example() {
       </div>
     );
   }
-
-  console.log(data);
 
   return (
     <div
@@ -453,7 +518,11 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <PaginationContainer items={data} itemsPerPage={6} />
+                <PaginationContainer
+                  items={data}
+                  itemsLenght={data.lenght}
+                  itemsPerPage={3}
+                />
               </div>
             </div>
           </section>

@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import PaginatedList from "./PaginatedList";
 
-function PaginationContainer({ items, itemsPerPage }) {
+function PaginationContainer({ items,itemsLenght, itemsPerPage }) {
   const [currentPage, setCurrentPage] = useState(1);
 
+  console.log("onPageList" + itemsLenght);
 
   const totalPages = Math.ceil(items.lenght / itemsPerPage);
 
@@ -48,14 +49,16 @@ function PaginationContainer({ items, itemsPerPage }) {
           </button>
           <p className="text-gray-500 font-normal">
             Page <span className="text-gray-900">{currentPage}</span> of{" "}
-            <span className="text-gray-900">10</span>
+            <span className="text-gray-900">{totalPages}</span>
           </p>
           <button
             className={`bg-white hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-300 rounded shadow-sm focus:outline-none ${
-              currentPage === 10 ? "cursor-not-allowed" : "cursor-pointer"
+              currentPage === totalPages
+                ? "cursor-not-allowed"
+                : "cursor-pointer"
             }`}
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === 10}
+            disabled={currentPage === totalPages}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

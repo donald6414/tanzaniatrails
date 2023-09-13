@@ -105,7 +105,7 @@ const SingleTour = () => {
                 <h5>8 Likes</h5>
               </div>
               <div className="flex items-center space-x-2">
-                <FaUserAlt size={24} />
+                <FaUserAlt size={24} />items.lenght
                 <h5>10 Reviews</h5>
               </div>
             </div>
