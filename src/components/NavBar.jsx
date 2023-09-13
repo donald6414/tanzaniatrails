@@ -67,16 +67,18 @@ const NavBar = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li>
+                <li >
                   <Link to={"/homestay"}>Home Stay</Link>
                 </li>
                 <li>
                   <Link to={"/volunteer"}>Volunteer</Link>
                 </li>
-
                 <li>
-                  <h1>Book</h1>
-                </li>
+                <Link to={"/about"}>About</Link>
+              </li>
+              <li>
+                <Link to={"/contact"}>Contact</Link>
+              </li>
               </ul>
             </div>
             <Link
@@ -110,11 +112,11 @@ const NavBar = () => {
                 </ul>
               </li> */}
               <li tabIndex={0}>
-                <a>
+                <a href="/tour">
                   Tours
-                  <FiChevronDown className="font-bold" />
+                  {/* <FiChevronDown className="font-bold" /> */}
                 </a>
-                <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
+                {/* <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
                   <li>
                     <Link to={"/marketplace"}>Buy</Link>
                   </li>
@@ -124,9 +126,9 @@ const NavBar = () => {
                   <li>
                     <Link to={"/marketplace"}>Auction</Link>
                   </li>
-                </ul>
+                </ul> */}
               </li>
-              <li tabIndex={0}>
+              {/* <li tabIndex={0}>
                 <a>
                   Destination
                   <FiChevronDown className="font-bold" />
@@ -139,10 +141,10 @@ const NavBar = () => {
                     <Link to={"/stake"}>Stake NFT</Link>
                   </li>
                 </ul>
-              </li>
-              <li>
+              </li> */}
+              {/* <li >
                 <Link to={"/homestay"}>Home Stay</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to={"/volunteer"}>Volunteer</Link>
               </li>
@@ -157,10 +159,10 @@ const NavBar = () => {
           <div className="navbar-end ">
             <span className="hidden md:flex rounded-full">
               <Link
-                to={"/tailormade"}
+                to={"/homestay"}
                 className="btn bg-[#683e12] hover:bg-[#51300d] rounded-full space-1 mt-1 border-none"
               >
-                Tailor Made
+                Home Stay
               </Link>
             </span>
 
@@ -169,9 +171,9 @@ const NavBar = () => {
               className="flex justify-center items-center md:hidden "
             >
               <img src={Logo} alt="logo" className="w-50 h-10" />
-              <h1 className="normal-case text-2xl font-bold tracking-wide pr-3 text-[#683e12] ml-2">
-                Tanzaniatrails
-              </h1>
+              {/* <h1 className="normal-case text-2xl font-bold tracking-wide pr-3 text-[#683e12] ml-2">
+                Travel With Us
+              </h1> */}
             </Link>
           </div>
         </>

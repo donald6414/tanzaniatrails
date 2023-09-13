@@ -16,6 +16,7 @@ import {
 import Volunteer from "./pages/Volunteer";
 import AboutUs from "./pages/About";
 import ContactUs from "./pages/Contact";
+import Tour from "./pages/Tour";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/tour" element={<Tour />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

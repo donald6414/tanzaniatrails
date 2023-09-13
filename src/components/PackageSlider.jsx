@@ -1,13 +1,14 @@
 import { useRef, useEffect, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { TourCard } from "./PackageCard";
-import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 
 register();
 
 export const PackageSlider = () => {
   const swiperElRef = useRef(null);
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -56,7 +57,7 @@ export const PackageSlider = () => {
   return (
     <swiper-container
       ref={swiperElRef}
-      slides-per-view="4"
+      slides-per-view={windowSize.current[0] <= 400 ? "1" : "4"}
       navigation="true"
       pagination="true"
       space-between="10"

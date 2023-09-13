@@ -39,11 +39,13 @@ export const Featured = () => {
 
         {/** View All */}
         <div className="mt-5 flex items-center justify-between">
-          <Title2
-            title={"View All"}
-            locate={"start"}
-            className={"text-[#683e12] drop-shadow-lg"}
-          />
+          <a href="/tour">
+            <Title2
+              title={"View All"}
+              locate={"start"}
+              className={"text-[#683e12] drop-shadow-lg"}
+            />
+          </a>
 
           {/** Slider Numbers */}
           <div className="md:hidden flex items-center ">

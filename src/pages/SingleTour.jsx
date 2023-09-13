@@ -47,7 +47,10 @@ const SingleTour = () => {
 
   if (data.id === undefined) {
     return (
-      <div className="flex justify-center items-center">
+      <div
+        className="flex justify-center items-center"
+        style={{ minHeight: "80vh", margin: "20px", borderRadius: "10px" }}
+      >
         <ClipLoader
           color={"#683e12"}
           loading={true}
@@ -113,10 +116,13 @@ const SingleTour = () => {
         </div>
 
         {/**Details Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div
+          id="summaryComponent"
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 "
+        >
           {/**Details Overview section */}
           <div className="col-span-2 bg-white rounded-lg shadow p-5 space-y-10">
-            <div className="bg-gradient-to-r from-[#e7ecef29] via-[#e1e7ea] to-[#e7ecef29]">
+            <div className="bg-gradient-to-r from-[#e7ecef29] via-[#e1e7ea] to-[#e7ecef29] sticky top-0 z-50">
               <div className="grid grid-cols-4 gap-5 py-5">
                 <a
                   href="#Overview"
