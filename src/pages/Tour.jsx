@@ -10,131 +10,28 @@ import {
 } from "@heroicons/react/20/solid";
 import PaginationContainer from "./Pagination/PaginationContainer";
 import { useRef, useEffect, useState } from "react";
-import { register } from "swiper/element/bundle";
 import ClipLoader from "react-spinners/ClipLoader";
+import GetRequest from "../DataProcessing/GetRequest";
+import { filters } from "../DataProcessing/Filters";
+import { subCategories } from "../DataProcessing/Filters";
+import { sortOptions } from "../DataProcessing/Filters";
+import { Title } from "./data";
+import axios from "axios";
+import { GetFilter } from "../DataProcessing/GetRequest";
+import swal from "sweetalert";
 
 const items = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);
 
-const sortOptions = [
-  { name: "Most Popular", href: "#", current: true },
-  { name: "Best Rating", href: "#", current: false },
-  { name: "Price: Low to High", href: "#", current: false },
-  { name: "Price: High to Low", href: "#", current: false },
-];
-const subCategories = [
-  { name: "Totes", href: "#" },
-  { name: "Backpacks", href: "#" },
-  { name: "Travel Bags", href: "#" },
-  { name: "Hip Bags", href: "#" },
-  { name: "Laptop Sleeves", href: "#" },
-];
-const filters = [
-  {
-    id: "Tour Levels",
-    name: "Tour Levels",
-    options: [
-      { value: "Any", label: "Any", checked: true },
-      { value: "Budget", label: "Budget", checked: false },
-      { value: "Luxury", label: "Luxury", checked: false },
-      { value: "Mid Range", label: "Mid Range", checked: false },
-    ],
-  },
+const WriteState = (checkedState, setState, state, idState) => {
+  checkedState
+    ? setState([...state, idState])
+    : RemoveItem(setState, state, idState);
+};
 
-  {
-    id: "Tour Focus",
-    name: "Tour Focus",
-    options: [
-      { value: "Any", label: "Any", checked: true },
-      {
-        value: "Game drive safari",
-        label: "Game drive safari",
-        checked: false,
-      },
-      {
-        value: "Mountain climbing only",
-        label: "Mountain climbing only",
-        checked: false,
-      },
-    ],
-  },
-
-  {
-    id: "Tour Activities",
-    name: "Tour Activities",
-    options: [
-      { value: "Any", label: "Any", checked: true },
-      {
-        value: "Game drives",
-        label: "Game drives",
-        checked: false,
-      },
-      {
-        value: "Walking safaris",
-        label: "Walking safaris",
-        checked: false,
-      },
-      {
-        value: "Hike tour",
-        label: "Hike tour",
-        checked: false,
-      },
-      {
-        value: "Machame route",
-        label: "Machame route",
-        checked: false,
-      },
-      {
-        value: "Mount Kilimanjaro",
-        label: "Mount Kilimanjaro",
-        checked: false,
-      },
-      {
-        value: "Tanzania",
-        label: "Tanzania",
-        checked: false,
-      },
-    ],
-  },
-
-  // {
-  //   id: "Price",
-  //   name: "Price",
-  //   options: [
-  //     { value: "Any", label: "Any", checked: true },
-  //     { value: "< $1000", label: "< $ 1000", checked: false },
-  //     { value: "$ 2000 - $ 3000", label: "$ 2000 - $ 3000", checked: false },
-  //     { value: "$ 3000 - 4000", label: "$ 3000 - 4000", checked: false },
-  //     { value: "$ 5000 >", label: "$ 5000 >", checked: false },
-  //   ],
-  // },
-  // {
-  //   id: "category",
-  //   name: "Age Group",
-  //   options: [
-  //     { value: "Any", label: "Any", checked: true },
-  //     { value: "infant( 0 - 7)", label: "infant( 0 - 7)", checked: false },
-  //     { value: "child( 7 - 17)", label: "child( 7 - 17)", checked: false },
-  //     { value: "Adult(+ 18)", label: "Adult(+ 18)", checked: false },
-  //     {
-  //       value: "Senior Citizen ( 65 +)",
-  //       label: "Senior Citizen ( 65 +)",
-  //       checked: false,
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "Ratings",
-  //   name: "Ratings",
-  //   options: [
-  //     { value: "Any", label: "Any", checked: true },
-  //     { value: "1 star", label: "1 star", checked: false },
-  //     { value: "2 star", label: "2 star", checked: false },
-  //     { value: "3 star", label: "3 star", checked: false },
-  //     { value: "4 star", label: "4 star", checked: false },
-  //     { value: "5 star", label: "5 star", checked: false },
-  //   ],
-  // },
-];
+const RemoveItem = (setFunction, newArray, elementToRemove) => {
+  const array = newArray;
+  setFunction(array.filter((item) => item !== elementToRemove));
+};
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -142,40 +39,47 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [filteredInfo, setFilteredInfo] = useState();
+  const [filteredPackage, setFilteredPackage] = useState();
+  const [activities, setActivities] = useState([]);
+  const [level, setLevel] = useState([]);
+  const [foci, setFoci] = useState([]);
+  const [reset, setReset] = useState(false);
 
-  //   const swiperElRef = useRef(null);
-
-  const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
+  const parameter = {
+    activities: activities,
+    level: level,
+    foci: foci,
+  };
 
   useEffect(() => {
-    const apiUrl = "https://api.tanzaniatrails.co.tz/api/get_popular_packages";
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
+    const infoUrl = "https://api.tanzaniatrails.co.tz/api/get_filter_info";
+    GetRequest(setFilteredInfo, infoUrl);
+    GetFilter(parameter, setFilteredPackage);
   }, []);
 
-  //   useEffect(() => {
-  //     // listen for Swiper events using addEventListener
-  //     swiperElRef.current.addEventListener("progress", (e) => {
-  //       const [swiper, progress] = e.detail;
-  //       console.log(progress);
-  //     });
+  const AddItem = (id, title, checked) => {
+    switch (title) {
+      case "Tour Levels":
+        WriteState(checked, setLevel, level, id);
+        break;
+      case "Tour Focus":
+        WriteState(checked, setFoci, foci, id);
+        break;
+      case "Tour Activities":
+        WriteState(checked, setActivities, activities, id);
+        break;
+      default:
+    }
+    setReset(true);
+  };
 
-  //     swiperElRef.current.addEventListener("slidechange", (e) => {
-  //       console.log("slide changed");
-  //     });
-  //   }, []);
+  if (reset) {
+    GetFilter(parameter, setFilteredPackage);
+    setReset(false);
+  }
 
-  if (data === undefined) {
+  if (!filteredPackage || reset) {
     return (
       <div
         className="flex justify-center items-center"
@@ -282,7 +186,7 @@ export default function Example() {
                       />
                     </div>
 
-                    {filters.map((section) => (
+                    {filteredInfo.map((section, index) => (
                       <Disclosure
                         as="div"
                         key={section.id}
@@ -293,7 +197,7 @@ export default function Example() {
                             <h3 className="-mx-2 -my-3 flow-root">
                               <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                                 <span className="font-medium text-gray-900">
-                                  {section.name}
+                                  {Title[index]}
                                 </span>
                                 <span className="ml-6 flex items-center">
                                   {open ? (
@@ -312,24 +216,34 @@ export default function Example() {
                             </h3>
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
-                                {section.options.map((option, optionIdx) => (
+                                {section.map((option, optionIdx) => (
                                   <div
-                                    key={option.value}
+                                    key={option.title}
                                     className="flex items-center"
                                   >
                                     <input
-                                      id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      defaultValue={option.value}
+                                      id={`filter-mobile-${Title[index]}-${optionIdx}`}
+                                      name={`${section.id}`}
+                                      defaultValue={option.title}
                                       type="checkbox"
-                                      defaultChecked={option.checked}
+                                      defaultChecked={false}
+                                      onChange={() => {
+                                        var checkbox = document.getElementById(
+                                          `filter-mobile-${Title[index]}-${optionIdx}`
+                                        );
+                                        AddItem(
+                                          option.id,
+                                          Title[index],
+                                          checkbox.checked
+                                        );
+                                      }}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     />
                                     <label
                                       htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
                                       className="ml-3 min-w-0 flex-1 text-gray-500"
                                     >
-                                      {option.label}
+                                      {option.title}
                                     </label>
                                   </div>
                                 ))}
@@ -457,10 +371,10 @@ export default function Example() {
                   />
                 </div>
 
-                {filters.map((section) => (
+                {filteredInfo.map((section, index) => (
                   <Disclosure
                     as="div"
-                    key={section.id}
+                    key={index}
                     className="border-b border-gray-200 py-6"
                   >
                     {({ open }) => (
@@ -468,7 +382,7 @@ export default function Example() {
                         <h3 className="-my-3 flow-root">
                           <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                             <span className="font-medium text-gray-900">
-                              {section.name}
+                              {Title[index]}
                             </span>
                             <span className="ml-6 flex items-center">
                               {open ? (
@@ -487,24 +401,34 @@ export default function Example() {
                         </h3>
                         <Disclosure.Panel className="pt-6">
                           <div className="space-y-4">
-                            {section.options.map((option, optionIdx) => (
+                            {section.map((option, optionIdx) => (
                               <div
                                 key={option.value}
                                 className="flex items-center"
                               >
                                 <input
-                                  id={`filter-${section.id}-${optionIdx}`}
+                                  id={`filter-mobile-${Title[index]}-${optionIdx}`}
                                   name={`${section.id}[]`}
-                                  defaultValue={option.value}
+                                  defaultValue={option.title}
+                                  onChange={() => {
+                                    var checkbox = document.getElementById(
+                                      `filter-mobile-${Title[index]}-${optionIdx}`
+                                    );
+                                    AddItem(
+                                      option.id,
+                                      Title[index],
+                                      checkbox.checked
+                                    );
+                                  }}
                                   type="checkbox"
-                                  defaultChecked={option.checked}
+                                  defaultChecked={false}
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
                                   className="ml-3 text-sm text-gray-600"
                                 >
-                                  {option.label}
+                                  {option.title}
                                 </label>
                               </div>
                             ))}
@@ -519,9 +443,9 @@ export default function Example() {
               {/* Product grid */}
               <div className="lg:col-span-3">
                 <PaginationContainer
-                  items={data}
-                  itemsLenght={data.lenght}
-                  itemsPerPage={3}
+                  items={filteredPackage?.data}
+                  itemsLenght={filteredPackage?.data.lenght}
+                  itemsPerPage={12}
                 />
               </div>
             </div>

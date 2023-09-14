@@ -5,8 +5,6 @@ import PaginatedList from "./PaginatedList";
 function PaginationContainer({ items,itemsLenght, itemsPerPage }) {
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log("onPageList" + itemsLenght);
-
   const totalPages = Math.ceil(items.lenght / itemsPerPage);
 
   const handlePageChange = (newPage) => {
