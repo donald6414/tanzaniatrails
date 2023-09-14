@@ -4,7 +4,41 @@ import { PackageCard, TourCard } from "./PackageCard";
 import { Link } from "react-router-dom";
 import { FaBackward, FaForward } from "react-icons/fa";
 import { PackageSlider } from "./PackageSlider";
+import { useRef, useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+
 export const Featured = () => {
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const apiUrl = "https://api.tanzaniatrails.co.tz/api/get_popular_packages";
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (data === null) {
+    return (
+      <div className="flex justify-center items-center">
+        <ClipLoader
+          color={"#683e12"}
+          loading={true}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+    );
+  }
   return (
     <div className="bg-slate-100 md:pb-24 py-10">
       <div className="container mx-auto px-5">
@@ -28,14 +62,20 @@ export const Featured = () => {
           color={"slate-500"}
         />
         <div className="mt-5">
-          <PackageSlider />
+          {!data ? (
+            <div className="flex justify-center items-center">
+              <ClipLoader
+                color={"#683e12"}
+                loading={true}
+                size={150}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </div>
+          ) : (
+            <PackageSlider data={data} />
+          )}
         </div>
-        {/* <div className="mt-5 grid grid-cols-1 md:grid-cols-4 gap-5 ">
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-        </div> */}
 
         {/** View All */}
         <div className="mt-5 flex items-center justify-between">

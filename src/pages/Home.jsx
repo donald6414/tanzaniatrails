@@ -15,14 +15,14 @@ const Home = () => {
   return (
     <div className="">
       <Hero />
-      <TourCategories />
+      {/* <TourCategories /> */}
       <Featured />
       <TrustedCat />
       <BeachFeatured />
-      <TrekkingFeatured />
-      <Ecosystem />
+      {/* <TrekkingFeatured /> */}
+      {/* <Ecosystem /> */}
       <Destinations />
-      <FAQs />
+      {/* <FAQs /> */}
       {/* <Operation /> */}
     </div>
   );
