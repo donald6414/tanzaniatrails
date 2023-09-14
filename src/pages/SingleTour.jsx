@@ -105,7 +105,8 @@ const SingleTour = () => {
                 <h5>8 Likes</h5>
               </div>
               <div className="flex items-center space-x-2">
-                <FaUserAlt size={24} />items.lenght
+                <FaUserAlt size={24} />
+                items.lenght
                 <h5>10 Reviews</h5>
               </div>
             </div>
@@ -297,7 +298,6 @@ const SingleTour = () => {
               </div>
             </div>
           </div>
-
           {/**Form  Section */}
           <div className="space-y-10">
             <div className="">
@@ -305,7 +305,7 @@ const SingleTour = () => {
                 <h5>Starting From</h5>
                 <h1 className=" font-bold text-4xl ">$ {data.price}</h1>
               </div>
-              <BookingForm price={3000} />
+              <BookingForm price={data.price} id={id} />
             </div>
             <div className="">
               <button
