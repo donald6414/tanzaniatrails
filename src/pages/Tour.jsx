@@ -19,6 +19,7 @@ import { Title } from "./data";
 import axios from "axios";
 import { GetFilter } from "../DataProcessing/GetRequest";
 import swal from "sweetalert";
+import TourFilterElement from "./TourFilterElement";
 
 const items = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);
 
@@ -337,7 +338,7 @@ export default function Example() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
-              <form className="hidden lg:block">
+              <form className="hidden lg:block sticky top-0">
                 <h3 className="sr-only">Categories</h3>
                 {/* <ul
                   role="list"
@@ -442,11 +443,7 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <PaginationContainer
-                  items={filteredPackage?.data}
-                  itemsLenght={filteredPackage?.data.lenght}
-                  itemsPerPage={12}
-                />
+                <TourFilterElement data={filteredPackage?.data} />
               </div>
             </div>
           </section>

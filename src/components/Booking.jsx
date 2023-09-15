@@ -46,8 +46,8 @@ export const BookingForm = ({ price, id }) => {
     full_name: "",
     email: "",
     phone_number: "",
-    adult: "1",
-    children: "0",
+    adult: 1,
+    children: 0,
     description: "",
     package_id: id,
   });

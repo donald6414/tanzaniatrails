@@ -17,6 +17,7 @@ import Volunteer from "./pages/Volunteer";
 import AboutUs from "./pages/About";
 import ContactUs from "./pages/Contact";
 import Tour from "./pages/Tour";
+import KardTest from "./pages/cardTest";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/tour" element={<Tour />} />
+          <Route path="/test" element={<KardTest />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { TourCard } from "./PackageCard";
+import TourFilterElement from "../pages/TourFilterElement";
+import Kard from "../pages/Kard";
 register();
 
 export const PackageSlider = ({ data }) => {
@@ -25,13 +27,13 @@ export const PackageSlider = ({ data }) => {
       slides-per-view={windowSize.current[0] <= 400 ? "1" : "4"}
       navigation="true"
       pagination="true"
-      space-between="10"
+      space-between="1"
     >
       {data
         ? data.map((item) => {
             return (
               <swiper-slide>
-                <TourCard item={item} />
+                <Kard item={item} />
               </swiper-slide>
             );
           })

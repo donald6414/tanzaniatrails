@@ -16,12 +16,12 @@ const Home = () => {
     <div className="">
       <Hero />
       {/* <TourCategories /> */}
+      <Destinations />
       <Featured />
       <TrustedCat />
       <BeachFeatured />
       {/* <TrekkingFeatured /> */}
       {/* <Ecosystem /> */}
-      <Destinations />
       {/* <FAQs /> */}
       {/* <Operation /> */}
     </div>
