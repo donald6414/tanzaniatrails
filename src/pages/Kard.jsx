@@ -22,7 +22,7 @@ export default function Kard({ item }) {
             <h2 class="mt-2 mb-2  font-bold element">{item.title}</h2>
             <p class="text-sm ParagraphElememt">{item.description}</p>
             <div class="mt-3 flex items-center">
-              <span class="text-sm font-semibold">$ D</span>
+              <span class="text-sm font-semibold">$</span>
               &nbsp;
               <span class="font-bold text-xl">{item.price}</span>
             </div>
