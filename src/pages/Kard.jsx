@@ -22,7 +22,7 @@ export default function Kard({ item }) {
             <h2 class="mt-2 mb-2  font-bold element">{item.title}</h2>
             <p class="text-sm ParagraphElememt">{item.description}</p>
             <div class="mt-3 flex items-center">
-              <span class="text-sm font-semibold">$</span>
+              <span class="text-sm font-semibold">$ D</span>
               &nbsp;
               <span class="font-bold text-xl">{item.price}</span>
             </div>
@@ -32,7 +32,7 @@ export default function Kard({ item }) {
               <i class="far fa-clock fa-fw mr-2 text-gray-900"></i> 3 Tage
             </span>
             <span class="flex items-center">
-              <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i>{" "}
+              <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i>
               Ermäßigung mit Karte
             </span>
           </div>
