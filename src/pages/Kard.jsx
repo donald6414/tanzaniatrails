@@ -5,7 +5,7 @@ export default function Kard({ item }) {
     <div>
       <div class="w-full sm:w-50 md:w-50 xl:w-50 p-4">
         <a
-          href={`/singletour/${item.id}`}
+          href={"/SingleTour/" + item.id}
           class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden"
         >
           <div class="relative pb-48 overflow-hidden">
@@ -22,10 +22,9 @@ export default function Kard({ item }) {
             <h2 class="mt-2 mb-2  font-bold element">{item.title}</h2>
             <p class="text-sm ParagraphElememt">{item.description}</p>
             <div class="mt-3 flex items-center">
-              <span class="text-sm font-semibold">ab</span>&nbsp;
-              <span class="font-bold text-xl">{item.price}</span>
+              <span class="text-sm font-semibold">$</span>
               &nbsp;
-              <span class="text-sm font-semibold">€</span>
+              <span class="font-bold text-xl">{item.price}</span>
             </div>
           </div>
           <div class="p-4 border-t border-b text-xs text-gray-700">

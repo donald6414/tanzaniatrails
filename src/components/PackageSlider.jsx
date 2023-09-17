@@ -30,10 +30,10 @@ export const PackageSlider = ({ data }) => {
       space-between="1"
     >
       {data
-        ? data.map((item) => {
+        ? data.map((item, index) => {
             return (
               <swiper-slide>
-                <Kard item={item} />
+                <Kard key={index} item={item} />
               </swiper-slide>
             );
           })
