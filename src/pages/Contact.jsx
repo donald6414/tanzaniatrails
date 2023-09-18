@@ -3,8 +3,8 @@ import axios from "axios";
 import swal from "sweetalert";
 import ClipLoader from "react-spinners/ClipLoader";
 import Swal from "sweetalert2";
-import Checked from '../assets/checked.png'
-
+import Checked from "../assets/checked.png";
+import Cancel from '../assets/failed.png'
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,7 +39,7 @@ function ContactForm() {
 
     // Make a POST request using axios
     axios
-      .post("https://api.tanzaniatrails.co.tz/api/contact_message", payload)
+      .post("https://api.tanzaniatrails.co.tz/api/contact_message")
       .then((response) => {
         console.log("successFull");
         console.log("Response from the server:", response.data);
@@ -51,14 +51,22 @@ function ContactForm() {
         setPressLoading(false);
 
         Swal.fire({
-          title: 'Submission Sent',
-          text: 'We will contact you shotly',
+          title: "Submission Sent",
+          text: "We will contact you shotly",
           imageUrl: Checked,
-          imageAlt: 'successful'});
+          imageAlt: "successful",
+        });
       })
       .catch((error) => {
         setPressLoading(false);
         console.error("Error:", error);
+
+        Swal.fire({
+          title: "Submission Failed",
+          text: error.message,
+          imageUrl: Cancel,
+          imageAlt: "successful",
+        });
         // Handle errors
       });
   };
@@ -128,7 +136,7 @@ function ContactForm() {
                   <p className="mt-2">
                     Email:{" "}
                     <a href="mailto:info@travelwithus.co.tz">
-                    info@travelwithus.co.tz
+                      info@travelwithus.co.tz
                     </a>
                   </p>
                 </div>

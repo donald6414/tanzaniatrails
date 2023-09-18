@@ -1,5 +1,6 @@
 import React from "react";
 import "./tourElement.css";
+import Kard from "../components/Kard";
 
 export default function TourFilterElement({ data }) {
   console.log(data);

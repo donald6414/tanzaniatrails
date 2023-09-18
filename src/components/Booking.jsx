@@ -6,6 +6,7 @@ import axios from "axios";
 import swal from "sweetalert";
 import ClipLoader from "react-spinners/ClipLoader";
 import Checked from "../assets/checked.png";
+import Cancel from "../assets/failed.png";
 import Swal from "sweetalert2";
 
 export const BookingHorizontal = () => {
@@ -91,10 +92,11 @@ export const BookingForm = ({ price, id }) => {
       console.log(response);
       setLoading(false);
       Swal.fire({
-        title: 'Submission Sent',
-        text: 'We will contact you shotly',
+        title: "Submission Sent",
+        text: "We will contact you shotly",
         imageUrl: Checked,
-        imageAlt: 'successful'});
+        imageAlt: "successful",
+      });
 
       setFormData({
         full_name: "",
@@ -106,7 +108,12 @@ export const BookingForm = ({ price, id }) => {
         package_id: id,
       });
     } catch (error) {
-      swal(error.message);
+      Swal.fire({
+        title: "Submission Failed",
+        text: error.message,
+        imageUrl: Cancel,
+        imageAlt: "successful",
+      });
       console.log(error);
       setLoading(false);
     }
