@@ -123,12 +123,12 @@ function ContactForm() {
                 <div className="bg-blue-500 p-4 text-white contactUs">
                   <p>Contact us today to start planning your next adventure:</p>
                   <p className="mt-2">
-                    Phone: <a href="tel:+255742147567">+255 7XX 1X7 5XX</a>
+                    Phone: <a href="tel:+255 785 560 820">+255 785 560 820</a>
                   </p>
                   <p className="mt-2">
                     Email:{" "}
-                    <a href="mailto:bnampellah1@gmail.com">
-                      TravelwithUS@gmail.com
+                    <a href="mailto:info@travelwithus.co.tz">
+                    info@travelwithus.co.tz
                     </a>
                   </p>
                 </div>
