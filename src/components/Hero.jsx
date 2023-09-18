@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="md:mx-36">
               <h1 className="md:text-7xl text-3xl text-white font-bold tracking-wide">
                 <span className="btn bg-[#683e12] hover:bg-[#683e12] border-none rounded-full mb-5">
-                  <h1 className="text-xs ">Welcome to Tanzaniatrails.</h1>
+                  <h1 className="text-xs ">Welcome to TravelWithUs.</h1>
                 </span>
                 <br />
                 <span className="drop-shadow-lg">

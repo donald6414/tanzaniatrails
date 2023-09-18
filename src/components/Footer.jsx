@@ -29,54 +29,54 @@ const Footer = () => {
             {/**Company */}
             <div className="">
               <span className="footer-title">Company</span>
-              <a href="#hero" className="text-slate-100 hover:text-primary">
+              <a href="/about" className="text-slate-100 hover:text-primary">
                 About us
               </a>
-              <a href="#faqs" className="text-slate-100 hover:text-primary">
+              <a href="/contact" className="text-slate-100 hover:text-primary">
                 Contact
               </a>
               <Link
-                to={"/jobs"}
+                to={"/volunteer"}
                 href="#"
                 className="text-slate-100 hover:text-primary"
               >
                 Jobs
               </Link>
-              <Link
+              {/* <Link
                 to={"/press-kit"}
                 href="#"
                 className="text-slate-100 hover:text-primary"
               >
                 Press kit
-              </Link>
+              </Link> */}
             </div>
             {/**Tours */}
             <div className="flex flex-col">
               <span className="footer-title">Tours</span>
-              <a href="#hero" className="text-slate-100 hover:text-primary">
+              <a href="/about" className="text-slate-100 hover:text-primary">
                 About us
               </a>
-              <a href="#faqs" className="text-slate-100 hover:text-primary">
+              <a href="/contact" className="text-slate-100 hover:text-primary">
                 Contact
               </a>
               <Link
-                to={"/jobs"}
+                to={"/volunteer"}
                 href="#"
                 className="text-slate-100 hover:text-primary"
               >
                 Jobs
               </Link>
-              <Link
+              {/* <Link
                 to={"/press-kit"}
                 href="#"
                 className="text-slate-100 hover:text-primary"
               >
                 Press kit
-              </Link>
+              </Link> */}
             </div>
 
             {/**Services */}
-            <div className="">
+            {/* <div className="">
               <span className="footer-title">Services</span>
               <Link
                 to={"/greengpt"}
@@ -106,9 +106,9 @@ const Footer = () => {
               >
                 Marketplace
               </Link>
-            </div>
+            </div> */}
             {/**Legal */}
-            <div>
+            {/* <div>
               <span className="footer-title">Legal</span>
               <Link
                 to={"./terms"}
@@ -127,13 +127,13 @@ const Footer = () => {
               <a href="#" className="text-slate-100 hover:text-primary">
                 Cookie policy
               </a>
-            </div>
+            </div> */}
           </>
         </footer>
         <footer className="footer items-center px-4 p-4 bg-[#51300d] text-neutral-content container mx-auto rounded-t-lg ">
           <>
             <div className="items-center grid-flow-col ">
-              <p>Copyright © 2023 -Tanzania Trails. All right reserved.</p>
+              <p>Copyright © 2023 -TravelWithUs. All right reserved.</p>
             </div>
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
               <Link>

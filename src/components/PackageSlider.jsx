@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { register } from "swiper/element/bundle";
 import { TourCard } from "./PackageCard";
 import TourFilterElement from "../pages/TourFilterElement";
-import Kard from "../pages/Kard";
+import Kard from "./Kard";
 register();
 
 export const PackageSlider = ({ data }) => {

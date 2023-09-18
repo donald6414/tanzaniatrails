@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import swal from "sweetalert";
 import ClipLoader from "react-spinners/ClipLoader";
+import Swal from "sweetalert2";
+import Checked from '../assets/checked.png'
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -48,7 +50,11 @@ function ContactForm() {
         setError();
         setPressLoading(false);
 
-        swal("Hello world!");
+        Swal.fire({
+          title: 'Submission Sent',
+          text: 'We will contact you shotly',
+          imageUrl: Checked,
+          imageAlt: 'successful'});
       })
       .catch((error) => {
         setPressLoading(false);

@@ -62,7 +62,7 @@ const SingleTour = () => {
     );
   }
 
-  console.log(data.title);
+  console.log(data);
   const sampleReview = [
     {
       user: "John Doe",
@@ -96,7 +96,7 @@ const SingleTour = () => {
                   {data.no_of_days} Days / {data.no_of_days - 1} Nights
                 </h5>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <FaStar size={24} />
                 <h5>4.5 Rating</h5>
               </div>
@@ -106,9 +106,8 @@ const SingleTour = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <FaUserAlt size={24} />
-                items.lenght
                 <h5>10 Reviews</h5>
-              </div>
+              </div> */}
             </div>
             <div className="absolute bottom-0 bg-slate-200 flex justify-center items-center w-full left-0 rounded-b-lg p-3">
               <Title2 title={"Tour Code : 456799"} />
@@ -288,26 +287,26 @@ const SingleTour = () => {
             </div> */}
 
             {/**Reviews */}
-            <div id="Reviews" className="">
+            {/* <div id="Reviews" className="">
               <Title title={"Reviews"} locate={"start"} />
               <div className="">
-                {/* <ReviewForm /> */}
+                <ReviewForm />
                 {sampleReview.map((review, index) => {
                   return <ReviewCard key={index} review={review} />;
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
           {/**Form  Section */}
-          <div className="space-y-10">
+          <div className="space-y-10 sticky top-0">
             <div className="">
               <div className="p-2 bg-white shadow-md text-center rounded-lg space-y-4">
                 <h5>Starting From</h5>
-                <h1 className=" font-bold text-4xl ">$ {data.price}</h1>
+                <h1 className=" font-bold text-4xl">$ {data.price}</h1>
               </div>
               <BookingForm price={data.price} id={id} />
             </div>
-            <div className="">
+            {/* <div className="">
               <button
                 type="submit"
                 className="btn bg-[#683e12] hover:bg-[#683e12] text-white py-2 rounded-full w-full animate-pulse"
@@ -332,14 +331,14 @@ const SingleTour = () => {
                   Generate Itinerary
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/**Related Tours Section */}
-        <div className="py-20">
+        {/* <div className="py-20">
           <RelatedFeatured />
-        </div>
+        </div> */}
       </div>
     </div>
   );

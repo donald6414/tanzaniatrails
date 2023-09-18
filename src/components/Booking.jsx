@@ -5,6 +5,8 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import axios from "axios";
 import swal from "sweetalert";
 import ClipLoader from "react-spinners/ClipLoader";
+import Checked from "../assets/checked.png";
+import Swal from "sweetalert2";
 
 export const BookingHorizontal = () => {
   return (
@@ -88,7 +90,11 @@ export const BookingForm = ({ price, id }) => {
 
       console.log(response);
       setLoading(false);
-      swal("Hello world!");
+      Swal.fire({
+        title: 'Submission Sent',
+        text: 'We will contact you shotly',
+        imageUrl: Checked,
+        imageAlt: 'successful'});
 
       setFormData({
         full_name: "",
