@@ -98,6 +98,8 @@ export default function Example() {
     );
   }
 
+  console.log(filteredPackage.data);
+
   return (
     <div
       className="bg-white"

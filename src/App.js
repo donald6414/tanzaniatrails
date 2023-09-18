@@ -18,6 +18,7 @@ import AboutUs from "./pages/About";
 import ContactUs from "./pages/Contact";
 import Tour from "./pages/Tour";
 import KardTest from "./pages/cardTest";
+import PackageList from "./pages/AllPackages";
 
 export default function App() {
   return (
@@ -41,6 +42,8 @@ export default function App() {
           <Route path="/tour" element={<Tour />} />
           <Route path="/test" element={<KardTest />} />
           <Route path="*" element={<Error />} />
+          <Route path="/allpackages" element={<PackageList />} />
+
         </Routes>
       </div>
       <Footer />

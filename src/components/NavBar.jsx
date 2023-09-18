@@ -67,18 +67,25 @@ const NavBar = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li >
+                <li>
                   <Link to={"/homestay"}>Home Stay</Link>
+                </li>
+                <li>
+                  <a href="/allpackages">Packages</a>
+                </li>
+                <li>
+                  <a href="/tour">Tour</a>
                 </li>
                 <li>
                   <Link to={"/volunteer"}>Volunteer</Link>
                 </li>
                 <li>
-                <Link to={"/about"}>About</Link>
-              </li>
-              <li>
-                <Link to={"/contact"}>Contact</Link>
-              </li>
+                  <Link to={"/about"}>About</Link>
+                </li>
+
+                <li>
+                  <Link to={"/contact"}>Contact</Link>
+                </li>
               </ul>
             </div>
             <Link
@@ -112,10 +119,9 @@ const NavBar = () => {
                 </ul>
               </li> */}
               <li tabIndex={0}>
-                <a href="/tour">
-                  Tours
-                  {/* <FiChevronDown className="font-bold" /> */}
-                </a>
+                <a href="/tour">Tours</a>
+
+                {/* <FiChevronDown className="font-bold" /> */}
                 {/* <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
                   <li>
                     <Link to={"/marketplace"}>Buy</Link>
@@ -127,6 +133,10 @@ const NavBar = () => {
                     <Link to={"/marketplace"}>Auction</Link>
                   </li>
                 </ul> */}
+              </li>
+              <li>
+                {" "}
+                <a href="/allpackages">Packages</a>
               </li>
               {/* <li tabIndex={0}>
                 <a>
