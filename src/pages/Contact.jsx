@@ -39,7 +39,7 @@ function ContactForm() {
 
     // Make a POST request using axios
     axios
-      .post("https://api.tanzaniatrails.co.tz/api/contact_message")
+      .post("https://api.tanzaniatrails.co.tz/api/contact_message",payload)
       .then((response) => {
         console.log("successFull");
         console.log("Response from the server:", response.data);
