@@ -71,10 +71,10 @@ const NavBar = () => {
                   <Link to={"/homestay"}>Home Stay</Link>
                 </li>
                 <li>
-                  <a href="/allpackages">Packages</a>
+                  <a href="/allpackages">All Tour</a>
                 </li>
                 <li>
-                  <a href="/tour">Tour</a>
+                  <a href="/tour">Filter Tour</a>
                 </li>
                 <li>
                   <Link to={"/volunteer"}>Volunteer</Link>
@@ -118,8 +118,8 @@ const NavBar = () => {
                   </li>
                 </ul>
               </li> */}
-              <li tabIndex={0}>
-                <a href="/tour">Tours</a>
+              {/* <li tabIndex={0}>
+                <a href="/tour">Tours</a> */}
 
                 {/* <FiChevronDown className="font-bold" /> */}
                 {/* <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
@@ -133,28 +133,30 @@ const NavBar = () => {
                     <Link to={"/marketplace"}>Auction</Link>
                   </li>
                 </ul> */}
-              </li>
-              <li>
+              {/* </li> */}
+              {/* <li>
                 {" "}
                 <a href="/allpackages">Packages</a>
-              </li>
-              {/* <li tabIndex={0}>
+              </li> */}
+
+              <li tabIndex={0}>
                 <a>
-                  Destination
+                  Tours
                   <FiChevronDown className="font-bold" />
                 </a>
                 <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
                   <li>
-                    <Link to={"/stake"}>Stake $gGPT</Link>
+                  <a href="/allpackages">All Tour</a>
                   </li>
                   <li>
-                    <Link to={"/stake"}>Stake NFT</Link>
+                  <a href="/tour">Filter Tour</a>
                   </li>
                 </ul>
-              </li> */}
-              {/* <li >
+              </li> 
+        <li >
                 <Link to={"/homestay"}>Home Stay</Link>
-              </li> */}
+              </li>
+
               <li>
                 <Link to={"/volunteer"}>Volunteer</Link>
               </li>
