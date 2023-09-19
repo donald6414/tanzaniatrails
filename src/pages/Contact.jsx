@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import ClipLoader from "react-spinners/ClipLoader";
 import Swal from "sweetalert2";
 import Checked from "../assets/checked.png";
-import Cancel from '../assets/failed.png'
+import Cancel from "../assets/failed.png";
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,7 +39,7 @@ function ContactForm() {
 
     // Make a POST request using axios
     axios
-      .post("https://api.tanzaniatrails.co.tz/api/contact_message",payload)
+      .post("https://api.tanzaniatrails.co.tz/api/contact_message", payload)
       .then((response) => {
         console.log("successFull");
         console.log("Response from the server:", response.data);
@@ -128,7 +128,28 @@ function ContactForm() {
                   destinations around the world
                 </p>
 
-                <div className="bg-blue-500 p-4 text-white contactUs">
+                <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                  <div class="flex flex-col-reverse mr-4">
+                    <dt class="text-base leading-7 text-gray-300">
+                    <a href="tel:+255 785 560 820">+255785560820</a>
+                    </dt>
+                    <dd class="text-2xl font-bold leading-9 tracking-tight text-white">
+                    Phone
+                    </dd>
+                  </div>
+                  <div class="flex flex-col-reverse ml-4">
+                    <dt class="text-base leading-7 text-gray-300">
+                    <a href="mailto:info@travelwithus.co.tz">
+                      info@travelwithus.co.tz
+                    </a>
+                    </dt>
+                    <dd class="text-2xl font-bold leading-9 tracking-tight text-white">
+                    Email:
+                    </dd>
+                  </div>
+                </dl>
+
+                {/* <div className="bg-blue-500 p-4 text-white contactUs">
                   <p>Contact us today to start planning your next adventure:</p>
                   <p className="mt-2">
                     Phone: <a href="tel:+255 785 560 820">+255 785 560 820</a>
@@ -139,7 +160,7 @@ function ContactForm() {
                       info@travelwithus.co.tz
                     </a>
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="flex flex-col w-full lg:w-2/3 justify-center">
                 <div className="container w-full px-4">
