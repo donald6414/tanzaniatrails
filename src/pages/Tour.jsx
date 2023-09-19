@@ -46,7 +46,7 @@ export default function Example() {
   const [filteredPackage, setFilteredPackage] = useState();
   const [activities, setActivities] = useState([]);
   const [level, setLevel] = useState([]);
-  const [foci, setFoci] = useState([]);
+  const [foci, setFoci] = useState([                                                                                                                                                                                                                                    ]);
   const [reset, setReset] = useState(false);
 
   const parameter = {
@@ -451,7 +451,11 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
-                {<TourFilterElement data={filteredPackage?.data} />}
+                {activities.length == 0 && foci.length == 0 && level.length == 0 ? (
+                  <PackageList />
+                ) : (
+                  <TourFilterElement data={filteredPackage?.data} />
+                )}
               </div>
             </div>
           </section>

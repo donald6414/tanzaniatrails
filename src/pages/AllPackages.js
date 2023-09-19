@@ -57,7 +57,7 @@ const PackageList = () => {
         Package List
       </h1> */}
 
-      <div className="pagination">
+      {/* <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
@@ -71,7 +71,7 @@ const PackageList = () => {
             {index + 1}
           </button>
         ))}
-      </div>
+      </div> */}
       {/* Render package data here */}
       <div className="allKardContainer">
         {packages.map((each) => {
