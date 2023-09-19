@@ -65,9 +65,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="-mt-10">
+        {/* <div className="-mt-10">
           <BookingHorizontal />
-        </div>
+        </div> */}
       </div>
     </div>
   );
