@@ -121,8 +121,8 @@ const NavBar = () => {
               {/* <li tabIndex={0}>
                 <a href="/tour">Tours</a> */}
 
-                {/* <FiChevronDown className="font-bold" /> */}
-                {/* <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
+              {/* <FiChevronDown className="font-bold" /> */}
+              {/* <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
                   <li>
                     <Link to={"/marketplace"}>Buy</Link>
                   </li>
@@ -146,15 +146,12 @@ const NavBar = () => {
                 </a>
                 <ul className="p-2 bg-base-300 text-slate-700 shadow-md">
                   <li>
-                  <a href="/allpackages">All Tour</a>
+                    <a href="/allpackages">All Tour</a>
                   </li>
                   <li>
-                  <a href="/tour">Filter Tour</a>
+                    <a href="/tour">Filter Tour</a>
                   </li>
                 </ul>
-              </li> 
-        <li >
-                <Link to={"/homestay"}>Home Stay</Link>
               </li>
 
               <li>
