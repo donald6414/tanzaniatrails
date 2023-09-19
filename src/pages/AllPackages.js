@@ -57,21 +57,6 @@ const PackageList = () => {
         Package List
       </h1> */}
 
-      {/* <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => handlePageChange(index + 1)}
-            className={
-              currentPage === index + 1
-                ? "text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900 active"
-                : "text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900"
-            }
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div> */}
       {/* Render package data here */}
       <div className="allKardContainer">
         {packages.map((each) => {

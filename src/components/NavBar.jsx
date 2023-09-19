@@ -70,11 +70,11 @@ const NavBar = () => {
                 <li>
                   <Link to={"/homestay"}>Home Stay</Link>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/allpackages">All Tour</a>
-                </li>
+                </li> */}
                 <li>
-                  <a href="/tour">Filter Tour</a>
+                  <a href="/tour">Our Tour</a>
                 </li>
                 <li>
                   <Link to={"/volunteer"}>Volunteer</Link>
@@ -139,7 +139,7 @@ const NavBar = () => {
                 <a href="/allpackages">Packages</a>
               </li> */}
 
-              <li tabIndex={0}>
+              {/* <li tabIndex={0}>
                 <a>
                   Tours
                   <FiChevronDown className="font-bold" />
@@ -152,6 +152,10 @@ const NavBar = () => {
                     <a href="/tour">Filter Tour</a>
                   </li>
                 </ul>
+              </li> */}
+
+              <li>
+                <a href="/tour">Our Tour</a>
               </li>
 
               <li>
