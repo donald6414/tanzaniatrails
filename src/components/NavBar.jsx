@@ -70,9 +70,6 @@ const NavBar = () => {
                 <li>
                   <Link to={"/homestay"}>Home Stay</Link>
                 </li>
-                {/* <li>
-                  <a href="/allpackages">All Tour</a>
-                </li> */}
                 <li>
                   <a href="/tour">Our Tour</a>
                 </li>
